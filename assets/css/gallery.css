@@ -1,0 +1,7 @@
+.gallery-grid { columns: 3 260px; column-gap: 16px; }
+.gallery-item { break-inside: avoid; margin-bottom: 16px; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.gallery-item img { width: 100%; transition: transform .45s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.86); z-index: 75; display: none; place-items: center; padding: 20px; }
+.lightbox.active { display: grid; }
+.lightbox img { max-height: 84vh; border-radius: var(--radius); box-shadow: var(--shadow); }

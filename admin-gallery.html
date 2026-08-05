@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Gallery | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="admin-dashboard" data-view="Gallery">
+    <main id="app">
+      <div class="dashboard-layout">
+        <aside class="sidebar">
+          <a class="dash-brand" href="index.html">
+            <img src="assets/images/stackly-logo.webp" alt="Stackly">
+          </a>
+          <span class="eyebrow">admin Portal</span>
+          <h3 data-user-name>Demo User</h3>
+          <span class="sidebar-email" data-user-email>guest@stackly.com</span>
+          <nav class="dash-nav">
+            <a class="" href="admin-dashboard.html">
+              <i class="fa-solid fa-diamond">
+              </i>Dashboard</a>
+              <a class="" href="admin-customers.html">
+                <i class="fa-solid fa-user">
+                </i>Customers</a>
+                <a class="" href="admin-reservations.html">
+                  <i class="fa-solid fa-calendar-check">
+                  </i>Reservations</a>
+                  <a class="" href="admin-orders.html">
+                    <i class="fa-solid fa-bell-concierge">
+                    </i>Orders</a>
+                    <a class="" href="admin-revenue.html">
+                      <i class="fa-solid fa-chart-line">
+                      </i>Revenue</a>
+                      <a class="" href="admin-menu-categories.html">
+                        <i class="fa-solid fa-utensils">
+                        </i>Menu Categories</a>
+                        <a class="" href="admin-food-management.html">
+                          <i class="fa-solid fa-utensils">
+                          </i>Food Management</a>
+                          <a class="" href="admin-chef-management.html">
+                            <i class="fa-solid fa-user">
+                            </i>Chef Management</a>
+                            <a class="" href="admin-branch-management.html">
+                              <i class="fa-solid fa-diamond">
+                              </i>Branch Management</a>
+                              <a class="active" href="admin-gallery.html">
+                                <i class="fa-solid fa-diamond">
+                                </i>Gallery</a>
+                                <a class="" href="admin-offers.html">
+                                  <i class="fa-solid fa-diamond">
+                                  </i>Offers</a>
+                                  <a class="" href="admin-blog.html">
+                                    <i class="fa-solid fa-diamond">
+                                    </i>Blog</a>
+                                    <a class="" href="admin-messages.html">
+                                      <i class="fa-solid fa-message">
+                                      </i>Messages</a>
+                                      <a class="" href="admin-notifications.html">
+                                        <i class="fa-solid fa-diamond">
+                                        </i>Notifications</a>
+                                        <a class="" href="admin-reports.html">
+                                          <i class="fa-solid fa-chart-line">
+                                          </i>Reports</a>
+                                          <a class="" href="admin-analytics.html">
+                                            <i class="fa-solid fa-chart-line">
+                                            </i>Analytics</a>
+                                            <a class="" href="admin-settings.html">
+                                              <i class="fa-solid fa-gear">
+                                              </i>Settings</a>
+                                            </nav>
+                                            <div class="dash-side-foot">
+                                              <a href="index.html">
+                                                <i class="fa-solid fa-arrow-left">
+                                                </i> Back to site</a>
+                                                <button data-logout>
+                                                  <i class="fa-solid fa-right-from-bracket">
+                                                  </i> Sign out</button>
+                                                </div>
+                                              </aside>
+                                              <div class="dashboard-main">
+                                                <div class="inline-actions">
+                                                  <div>
+                                                    <span class="eyebrow">Admin Portal</span>
+                                                    <h1>Gallery</h1>
+                                                  </div>
+                                                  <div class="dash-actions">
+                                                    <div class="dash-user">
+                                                      <i class="fa-solid fa-circle-user">
+                                                      </i>
+                                                      <div>
+                                                        <strong data-user-name>Demo User</strong>
+                                                        <span data-user-email>guest@stackly.com</span>
+                                                      </div>
+                                                    </div>
+                                                    <a class="btn btn-primary" href="404.html">
+                                                      <i class="fa-solid fa-plus">
+                                                      </i> New Booking</a>
+                                                    </div>
+                                                  </div>
+                                                  <div id="dashPanel">
+                                                    <section class="section mt-0">
+                                                      <div class="surface-pad">
+                                                        <h2>Gallery</h2>
+                                                        <p class="lead">Gallery tools are functional demo panels backed by LocalStorage data for Stackly admin operations.</p>
+                                                        <form class="form mt-2" onsubmit="event.preventDefault(); toast('Gallery saved.');">
+                                                          <div class="form-grid">
+                                                            <input required placeholder="Title">
+                                                            <input required placeholder="Status or category">
+                                                          </div>
+                                                          <textarea placeholder="Notes">
+                                                          </textarea>
+                                                          <button class="btn btn-primary">
+                                                            <i class="fa-solid fa-floppy-disk">
+                                                            </i> Save Gallery</button>
+                                                          </form>
+                                                        </div>
+                                                      </section>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </main>
+                                              <script src="assets/js/storage.js">
+                                              </script>
+                                              <script src="assets/js/toast.js">
+                                              </script>
+                                              <script src="assets/js/modal.js">
+                                              </script>
+                                              <script src="assets/js/auth.js">
+                                              </script>
+                                              <script src="assets/js/menu.js">
+                                              </script>
+                                              <script src="assets/js/gallery.js">
+                                              </script>
+                                              <script src="assets/js/reservation.js">
+                                              </script>
+                                              <script src="assets/js/dashboard.js">
+                                              </script>
+                                              <script src="assets/js/charts.js">
+                                              </script>
+                                              <script src="assets/js/validation.js">
+                                              </script>
+                                              <script src="assets/js/darkmode.js">
+                                              </script>
+                                              <script src="assets/js/slider.js">
+                                              </script>
+                                              <script src="assets/js/animations.js"></script>
+                                              <script src="assets/js/main.js">
+                                              </script>
+                                            </body>
+                                          </html>

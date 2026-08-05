@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stackly luxury restaurant, fine dining menus, private dining, chef specials, and reservations.">
+    <title>Stackly | Luxury Restaurant & Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="page-shell" data-page="home">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav-auth-mobile">
+            <a class="btn btn-ghost" href="login.html">
+              <i class="fa-solid fa-right-to-bracket">
+              </i> Login</a>
+              <a class="btn btn-primary" href="register.html">
+                <i class="fa-solid fa-user-plus">
+                </i> Register</a>
+              </div>
+            </nav>
+            <div class="nav-actions">
+              <a class="btn btn-ghost nav-auth" href="login.html">
+                <i class="fa-solid fa-right-to-bracket">
+                </i> Login</a>
+                <a class="btn btn-primary nav-auth" href="register.html">
+                  <i class="fa-solid fa-user-plus">
+                  </i> Register</a>
+                  <button class="icon-btn hamburger" title="Menu">
+                    <i class="fa-solid fa-bars">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main id="app">
+              <section class="hero home-hero">
+                <div class="hero-slider" data-hero-slider data-interval="800" aria-hidden="true">
+                  <div class="hero-slide is-active" data-bg="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?fm=webp&fit=crop&w=900&q=44" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?fm=webp&fit=crop&w=900&q=44')">
+                  </div>
+                  <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=webp&fit=crop&w=1280&q=44" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=webp&fit=crop&w=1280&q=44')">
+                  </div>
+                  <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1552566626-52f8b828add9?fm=webp&fit=crop&w=900&q=38" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?fm=webp&fit=crop&w=900&q=38')">
+                  </div>
+                  <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?fm=webp&fit=crop&w=1280&q=38" style="background-image:url('https://images.unsplash.com/photo-1578474846511-04ba529f0b88?fm=webp&fit=crop&w=1280&q=38')">
+                  </div>
+                </div>
+                <div class="container hero-content">
+                  <div class="hero-panel">
+                    <span class="eyebrow">Luxury Fine Dining</span>
+                    <h1>Stackly</h1>
+                    <div class="lux-line">
+                    </div>
+                    <p class="lead">A dark, cinematic dining house where tasting menus, private rituals, and chef-led service meet modern luxury.</p>
+                    <div class="hero-actions">
+                      <a class="btn btn-primary" href="404.html">
+                        <i class="fa-solid fa-calendar-check">
+                        </i> Reserve Table</a>
+                        <a class="btn btn-ghost" href="404.html">
+                          <i class="fa-solid fa-utensils">
+                          </i> Explore Menu</a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <div class="reservation-ribbon">
+                    <div class="container">
+                      <form class="quick-reserve glass" data-reservation>
+                        <input name="name" placeholder="Guest name" required>
+                        <input name="date" type="date" required>
+                        <input name="time" type="time" required>
+                        <input name="guests" type="number" min="1" max="18" placeholder="Guests" required>
+                        <button class="btn btn-primary">
+                          <i class="fa-solid fa-calendar-check">
+                          </i> Reserve</button>
+                        </form>
+                      </div>
+                    </div>
+                    <section class="section">
+                      <div class="container section-head">
+                        <div>
+                          <span class="eyebrow">Today's Special</span>
+                          <h2>Popular Dishes</h2>
+                        </div>
+                        <p>Signature plates balancing fire, fragrance, texture, and service theatre.</p>
+                      </div>
+                      <div class="container grid grid-3">
+                        <article class="card image-card menu-card" data-dish="1">
+                          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?fm=webp&fit=crop&w=760&q=38" alt="Saffron Lobster Veloute">
+                          <div class="card-body">
+                            <div class="menu-title-row">
+                              <div>
+                                <span class="tag">Non-Veg</span>
+                                <h3>Saffron Lobster Veloute</h3>
+                              </div>
+                              <button class="favorite" data-fav="1" title="Favorite">
+                                <i class="fa-solid fa-heart">
+                                </i>
+                              </button>
+                            </div>
+                            <p>Butter-poached lobster, saffron cream, fennel pollen, and smoked caviar.</p>
+                            <div class="dish-meta">
+                              <span>
+                                <i class="fa-regular fa-clock">
+                                </i> 28 min</span>
+                                <span>
+                                  <i class="fa-solid fa-star">
+                                  </i> Chef pick</span>
+                                </div>
+                                <div class="inline-actions">
+                                  <span class="price">$86</span>
+                                  <a class="btn btn-ghost" href="404.html">Details</a>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="card image-card menu-card" data-dish="2">
+                              <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?fm=webp&fit=crop&w=760&q=80" alt="Truffle Morel Risotto">
+                              <div class="card-body">
+                                <div class="menu-title-row">
+                                  <div>
+                                    <span class="tag">Italian</span>
+                                    <h3>Truffle Morel Risotto</h3>
+                                  </div>
+                                  <button class="favorite" data-fav="2" title="Favorite">
+                                    <i class="fa-regular fa-heart">
+                                    </i>
+                                  </button>
+                                </div>
+                                <p>Carnaroli rice folded with black truffle, morels, parmesan, and aged balsamic.</p>
+                                <div class="dish-meta">
+                                  <span>
+                                    <i class="fa-regular fa-clock">
+                                    </i> 24 min</span>
+                                    <span>
+                                      <i class="fa-solid fa-star">
+                                      </i> Chef pick</span>
+                                    </div>
+                                    <div class="inline-actions">
+                                      <span class="price">$64</span>
+                                      <a class="btn btn-ghost" href="404.html">Details</a>
+                                    </div>
+                                  </div>
+                                </article>
+                                <article class="card image-card menu-card" data-dish="3">
+                                  <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?fm=webp&fit=crop&w=760&q=50" alt="Charcoal Paneer Royal">
+                                  <div class="card-body">
+                                    <div class="menu-title-row">
+                                      <div>
+                                        <span class="tag">Indian</span>
+                                        <h3>Charcoal Paneer Royal</h3>
+                                      </div>
+                                      <button class="favorite" data-fav="3" title="Favorite">
+                                        <i class="fa-regular fa-heart">
+                                        </i>
+                                      </button>
+                                    </div>
+                                    <p>Tandoor paneer, cashew silk curry, fenugreek, and edible gold dust.</p>
+                                    <div class="dish-meta">
+                                      <span>
+                                        <i class="fa-regular fa-clock">
+                                        </i> 22 min</span>
+                                        <span>
+                                          <i class="fa-solid fa-star">
+                                          </i> Chef pick</span>
+                                        </div>
+                                        <div class="inline-actions">
+                                          <span class="price">$42</span>
+                                          <a class="btn btn-ghost" href="404.html">Details</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                    <article class="card image-card menu-card" data-dish="4">
+                                      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?fm=webp&fit=crop&w=760&q=80" alt="Jade Dumpling Consomme">
+                                      <div class="card-body">
+                                        <div class="menu-title-row">
+                                          <div>
+                                            <span class="tag">Chinese</span>
+                                            <h3>Jade Dumpling Consomme</h3>
+                                          </div>
+                                          <button class="favorite" data-fav="4" title="Favorite">
+                                            <i class="fa-regular fa-heart">
+                                            </i>
+                                          </button>
+                                        </div>
+                                        <p>Crystal dumplings in clarified mushroom tea with ginger and chive oil.</p>
+                                        <div class="dish-meta">
+                                          <span>
+                                            <i class="fa-regular fa-clock">
+                                            </i> 18 min</span>
+                                            <span>
+                                              <i class="fa-solid fa-star">
+                                              </i> Chef pick</span>
+                                            </div>
+                                            <div class="inline-actions">
+                                              <span class="price">$38</span>
+                                              <a class="btn btn-ghost" href="404.html">Details</a>
+                                            </div>
+                                          </div>
+                                        </article>
+                                        <article class="card image-card menu-card" data-dish="5">
+                                          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?fm=webp&fit=crop&w=760&q=80" alt="Mole Wagyu Short Rib">
+                                          <div class="card-body">
+                                            <div class="menu-title-row">
+                                              <div>
+                                                <span class="tag">Mexican</span>
+                                                <h3>Mole Wagyu Short Rib</h3>
+                                              </div>
+                                              <button class="favorite" data-fav="5" title="Favorite">
+                                                <i class="fa-solid fa-heart">
+                                                </i>
+                                              </button>
+                                            </div>
+                                            <p>Slow glazed wagyu, cacao mole, blue corn, and pickled heirloom onion.</p>
+                                            <div class="dish-meta">
+                                              <span>
+                                                <i class="fa-regular fa-clock">
+                                                </i> 36 min</span>
+                                                <span>
+                                                  <i class="fa-solid fa-star">
+                                                  </i> Chef pick</span>
+                                                </div>
+                                                <div class="inline-actions">
+                                                  <span class="price">$92</span>
+                                                  <a class="btn btn-ghost" href="404.html">Details</a>
+                                                </div>
+                                              </div>
+                                            </article>
+                                            <article class="card image-card menu-card" data-dish="6">
+                                              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?fm=webp&fit=crop&w=760&q=56" alt="Garden Jewel Tartare">
+                                              <div class="card-body">
+                                                <div class="menu-title-row">
+                                                  <div>
+                                                    <span class="tag">Veg</span>
+                                                    <h3>Garden Jewel Tartare</h3>
+                                                  </div>
+                                                  <button class="favorite" data-fav="6" title="Favorite">
+                                                    <i class="fa-regular fa-heart">
+                                                    </i>
+                                                  </button>
+                                                </div>
+                                                <p>Compressed beetroot, avocado cream, citrus pearls, and toasted seeds.</p>
+                                                <div class="dish-meta">
+                                                  <span>
+                                                    <i class="fa-regular fa-clock">
+                                                    </i> 16 min</span>
+                                                    <span>
+                                                      <i class="fa-solid fa-star">
+                                                      </i> Chef pick</span>
+                                                    </div>
+                                                    <div class="inline-actions">
+                                                      <span class="price">$34</span>
+                                                      <a class="btn btn-ghost" href="404.html">Details</a>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section alt">
+                                              <div class="container split">
+                                                <div>
+                                                  <span class="eyebrow">Experience</span>
+                                                  <h2>Private, polished, and deeply personal.</h2>
+                                                  <p class="lead">From champagne carts to tableside carving, the room moves around your evening with quiet precision.</p>
+                                                  <div class="stat-row mt-2">
+                                                    <div class="stat">
+                                                      <strong data-count="24">0</strong>
+                                                      <span>Chef seats</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                      <strong data-count="18">0</strong>
+                                                      <span>Course pairings</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                      <strong data-count="96">0</strong>
+                                                      <span>Guest rating</span>
+                                                    </div>
+                                                    <div class="stat">
+                                                      <strong data-count="7">0</strong>
+                                                      <span>Branches</span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="media-stack">
+                                                  <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?fm=webp&fit=crop&w=760&q=56" alt="Fine dining plate">
+                                                  <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?fm=webp&fit=crop&w=760&q=80" alt="Luxury service">
+                                                </div>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Meet Our Chef</span>
+                                                  <h2>Chef Recommendations</h2>
+                                                </div>
+                                                <a class="btn btn-ghost" href="404.html">All Chefs</a>
+                                              </div>
+                                              <div class="container grid grid-3">
+                                                <article class="card chef-card">
+                                                  <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?fm=webp&fit=crop&w=600&q=80" alt="Rafael Moreau">
+                                                  <div class="card-body">
+                                                    <h3>Rafael Moreau</h3>
+                                                    <span class="tag">Executive Chef</span>
+                                                    <p>French technique with coastal Indian spice architecture.</p>
+                                                  </div>
+                                                </article>
+                                                <article class="card chef-card">
+                                                  <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?fm=webp&fit=crop&w=600&q=74" alt="Anika Rao">
+                                                  <div class="card-body">
+                                                    <h3>Anika Rao</h3>
+                                                    <span class="tag">Pastry Director</span>
+                                                    <p>Architectural desserts, floral infusions, and precise plated drama.</p>
+                                                  </div>
+                                                </article>
+                                                <article class="card chef-card">
+                                                  <img src="https://images.unsplash.com/photo-1574966739987-65e38db0f7ce?fm=webp&fit=crop&w=600&q=80" alt="Marco Bellini">
+                                                  <div class="card-body">
+                                                    <h3>Marco Bellini</h3>
+                                                    <span class="tag">Chef de Cuisine</span>
+                                                    <p>Modern Italian tasting menus shaped by fire and fermentation.</p>
+                                                  </div>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section alt">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Tasting Journey</span>
+                                                  <h2>Evenings built course by course.</h2>
+                                                </div>
+                                                <p>Each menu moves through texture, temperature, aroma, and a final quiet finish.</p>
+                                              </div>
+                                              <div class="container grid grid-4">
+                                                <article class="card card-body">
+                                                  <span class="tag">01</span>
+                                                  <h3>Arrival Bite</h3>
+                                                  <p>A bright first taste with citrus, herbs, and crisp texture to open the palate.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">02</span>
+                                                  <h3>Fire Course</h3>
+                                                  <p>Charcoal, smoke, and slow reductions anchor the center of the evening.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">03</span>
+                                                  <h3>Cellar Pairing</h3>
+                                                  <p>Wine and zero-proof pairings are matched by weight, spice, and finish.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">04</span>
+                                                  <h3>Sweet Close</h3>
+                                                  <p>Floral desserts, warm service, and a final pour finish the room gently.</p>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container split">
+                                                <div class="media-stack">
+                                                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=webp&fit=crop&w=760&q=80" alt="Private dining room">
+                                                  <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Restaurant table setting">
+                                                </div>
+                                                <div>
+                                                  <span class="eyebrow">Private Dining</span>
+                                                  <h2>Rooms for moments that need their own rhythm.</h2>
+                                                  <p class="lead">Host proposals, launch dinners, leadership tables, and milestone celebrations with dedicated service, custom menus, and a room planned around your guest list.</p>
+                                                  <div class="hero-actions">
+                                                    <a class="btn btn-primary" href="404.html">
+                                                      <i class="fa-solid fa-champagne-glasses">
+                                                      </i> Plan Event</a>
+                                                      <a class="btn btn-ghost" href="404.html">
+                                                        <i class="fa-solid fa-calendar-days">
+                                                        </i> View Events</a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </section>
+                                                <section class="section alt">
+                                                  <div class="container section-head">
+                                                    <div>
+                                                      <span class="eyebrow">Guest Notes</span>
+                                                      <h2>Evenings guests remember.</h2>
+                                                    </div>
+                                                    <a class="btn btn-ghost" href="404.html">More Reviews</a>
+                                                  </div>
+                                                  <div class="container grid grid-3">
+                                                    <article class="card card-body">
+                                                      <h3>Flawless pacing.</h3>
+                                                      <p>The team read the table beautifully. Every course arrived with purpose, and nothing felt rushed.</p>
+                                                      <span class="tag">Maya Lin</span>
+                                                    </article>
+                                                    <article class="card card-body">
+                                                      <h3>Private room magic.</h3>
+                                                      <p>Our anniversary dinner felt personal from the first glass to the final dessert plate.</p>
+                                                      <span class="tag">Arjun Mehta</span>
+                                                    </article>
+                                                    <article class="card card-body">
+                                                      <h3>Chef table theatre.</h3>
+                                                      <p>Watching the menu come together beside the pass made the whole night feel alive.</p>
+                                                      <span class="tag">Sofia Grant</span>
+                                                    </article>
+                                                  </div>
+                                                </section>
+                                                <section class="section alt">
+                                                  <div class="container section-head">
+                                                    <div>
+                                                      <span class="eyebrow">Gallery Preview</span>
+                                                      <h2>Cinematic Dining</h2>
+                                                    </div>
+                                                    <a class="btn btn-primary" href="404.html">View Gallery</a>
+                                                  </div>
+                                                  <div class="container gallery-grid">
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=webp&fit=crop&w=760&q=80" alt="Stackly gallery">
+                                                    </div>
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?fm=webp&fit=crop&w=760&q=56" alt="Stackly gallery">
+                                                    </div>
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?fm=webp&fit=crop&w=760&q=56" alt="Stackly gallery">
+                                                    </div>
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Stackly gallery">
+                                                    </div>
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?fm=webp&fit=crop&w=760&q=80" alt="Stackly gallery">
+                                                    </div>
+                                                    <div class="gallery-item">
+                                                      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?fm=webp&fit=crop&w=760&q=50" alt="Stackly gallery">
+                                                    </div>
+                                                  </div>
+                                                </section>
+                                                <section class="section">
+                                                  <div class="container grid grid-3">
+                                                    <article class="offer-card card">
+                                                      <h3>Golden Hour Menu</h3>
+                                                      <p>Five courses with aperitif pairings before 6 PM.</p>
+                                                      <span class="price">25% Off</span>
+                                                    </article>
+                                                    <article class="offer-card card">
+                                                      <h3>Chef Table</h3>
+                                                      <p>Counter seats with Rafael's unreleased test kitchen plates.</p>
+                                                      <span class="price">$145</span>
+                                                    </article>
+                                                    <article class="offer-card card">
+                                                      <h3>Private Salon</h3>
+                                                      <p>Full buyout planning for milestone evenings.</p>
+                                                      <span class="price">12 Guests</span>
+                                                    </article>
+                                                  </div>
+                                                </section>
+                                              </main>
+                                              <footer class="site-footer">
+                                                <div class="container footer-cta">
+                                                  <div>
+                                                    <span class="eyebrow">The Guest List</span>
+                                                    <h3>Kitchen notes, and residency seats before they go public.</h3>
+                                                  </div>
+                                                  <form class="newsletter" data-newsletter>
+                                                    <input name="email" type="email" placeholder="Your email address" required>
+                                                    <button class="btn btn-primary">
+                                                      <i class="fa-solid fa-paper-plane">
+                                                      </i> Subscribe</button>
+                                                    </form>
+                                                  </div>
+                                                  <div class="container footer-grid">
+                                                    <div class="footer-brand">
+                                                      <a class="brand" href="404.html">
+                                                        <img src="assets/images/stackly-logo.webp" alt="Stackly">
+                                                      </a>
+                                                      <p>Luxury fine dining, cinematic tasting menus, private salons, and chef-led hospitality across seven city rooms.</p>
+                                                      <div class="socials">
+                                                        <a class="social" href="404.html" aria-label="Stackly on Instagram" title="Instagram">
+                                                          <i class="fa-brands fa-instagram">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on Facebook" title="Facebook">
+                                                          <i class="fa-brands fa-facebook-f">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on X" title="X">
+                                                          <i class="fa-brands fa-x-twitter">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on YouTube" title="YouTube">
+                                                          <i class="fa-brands fa-youtube">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on TikTok" title="TikTok">
+                                                          <i class="fa-brands fa-tiktok">
+                                                          </i>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Restaurant</h4>
+                                                      <a href="404.html">About Us</a>
+                                                      <a href="404.html">Our Story</a>
+                                                      <a href="404.html">Our Chefs</a>
+                                                      <a href="404.html">Branches</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Experience</h4>
+                                                      <a href="404.html">Our Menu</a>
+                                                      <a href="404.html">Reservations</a>
+                                                      <a href="404.html">Events</a>
+                                                      <a href="404.html">Private Dining</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Support</h4>
+                                                      <a href="404.html">Contact</a>
+                                                      <a href="404.html">FAQ</a>
+                                                      <a href="404.html">Journal</a>
+                                                      <a href="404.html">Offers</a>
+                                                    </div>
+                                                    <div class="footer-col footer-contact">
+                                                      <h4>Visit Us</h4>
+                                                      <p>
+                                                        <i class="fa-solid fa-location-dot">
+                                                        </i>
+                                                        <span>12 Astor Lane, New York</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-phone">
+                                                        </i>
+                                                        <span>+1 212 555 0198</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-envelope">
+                                                        </i>
+                                                        <span>concierge@stackly.example</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-regular fa-clock">
+                                                        </i>
+                                                        <span>Open daily, 12 PM - 12 AM</span>
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="container footer-bottom">
+                                                    <span>© 2026 Stackly. Crafted for fine dining.</span>
+                                                    <span class="footer-legal">
+                                                      <a href="404.html">Privacy</a>
+                                                      <a href="404.html">Terms</a>
+                                                      <a href="404.html">Press</a>
+                                                    </span>
+                                                  </div>
+                                                </footer>
+                                                <script src="assets/js/storage.js">
+                                                </script>
+                                                <script src="assets/js/toast.js">
+                                                </script>
+                                                <script src="assets/js/modal.js">
+                                                </script>
+                                                <script src="assets/js/auth.js">
+                                                </script>
+                                                <script src="assets/js/menu.js">
+                                                </script>
+                                                <script src="assets/js/gallery.js">
+                                                </script>
+                                                <script src="assets/js/reservation.js">
+                                                </script>
+                                                <script src="assets/js/dashboard.js">
+                                                </script>
+                                                <script src="assets/js/charts.js">
+                                                </script>
+                                                <script src="assets/js/validation.js">
+                                                </script>
+                                                <script src="assets/js/darkmode.js">
+                                                </script>
+                                                <script src="assets/js/slider.js">
+                                                </script>
+                                                <script src="assets/js/animations.js"></script>
+                                                <script src="assets/js/main.js">
+                                                </script>
+                                              </body>
+                                            </html>

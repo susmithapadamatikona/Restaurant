@@ -1,0 +1,11 @@
+.card { border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); overflow: hidden; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-5px); border-color: rgba(193,148,64,.5); box-shadow: var(--shadow); }
+.card-body { padding: 22px; }
+.image-card img { width: 100%; height: 230px; object-fit: cover; transition: transform .5s ease; }
+.image-card:hover img { transform: scale(1.06); }
+.price { color: var(--gold); font-size: 1.3rem; font-family: var(--font-heading); font-weight: 800; }
+.tag { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: rgba(193,148,64,.15); color: var(--gold); font-size: .78rem; font-weight: 700; }
+.dish-meta { display: flex; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: .9rem; margin: 12px 0; }
+.favorite { margin-left: auto; color: var(--gold); background: transparent; border: 0; cursor: pointer; font-size: 1.05rem; }
+.offer-card { padding: 26px; background: linear-gradient(145deg, rgba(193,148,64,.2), rgba(255,255,255,.04)); }
+.chef-card img { height: 300px; width: 100%; object-fit: cover; object-position: top; }

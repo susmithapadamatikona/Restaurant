@@ -1,0 +1,8 @@
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: none; } }
+@keyframes loaderSlide { from { transform: translateX(-110%); } to { transform: translateX(300%); } }
+@keyframes loaderPulse { 0%, 100% { opacity: 1; } 50% { opacity: .6; } }
+.reveal { opacity: 0; transform: translateY(22px); transition: .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.parallax { background-attachment: fixed; background-position: center; background-size: cover; }

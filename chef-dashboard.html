@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chef Dashboard | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="chef-dashboard">
+    <main id="app">
+      <div class="dashboard-layout">
+        <aside class="sidebar">
+          <a class="dash-brand" href="index.html">
+            <img src="assets/images/stackly-logo.webp" alt="Stackly">
+          </a>
+          <span class="eyebrow">chef Portal</span>
+          <h3 data-user-name>Demo User</h3>
+          <span class="sidebar-email" data-user-email>guest@stackly.com</span>
+          <nav class="dash-nav">
+            <a class="active" href="chef-dashboard.html">
+              <i class="fa-solid fa-diamond">
+              </i>Dashboard</a>
+              <a class="" href="chef-todays-orders.html">
+                <i class="fa-solid fa-bell-concierge">
+                </i>Today's Orders</a>
+                <a class="" href="chef-pending-orders.html">
+                  <i class="fa-solid fa-bell-concierge">
+                  </i>Pending Orders</a>
+                  <a class="" href="chef-completed-orders.html">
+                    <i class="fa-solid fa-bell-concierge">
+                    </i>Completed Orders</a>
+                    <a class="" href="chef-menu-management.html">
+                      <i class="fa-solid fa-utensils">
+                      </i>Menu Management</a>
+                      <a class="" href="chef-add-dish.html">
+                        <i class="fa-solid fa-utensils">
+                        </i>Add Dish</a>
+                        <a class="" href="chef-edit-dish.html">
+                          <i class="fa-solid fa-utensils">
+                          </i>Edit Dish</a>
+                          <a class="" href="chef-delete-dish.html">
+                            <i class="fa-solid fa-utensils">
+                            </i>Delete Dish</a>
+                            <a class="" href="chef-inventory-status.html">
+                              <i class="fa-solid fa-diamond">
+                              </i>Inventory Status</a>
+                              <a class="" href="chef-customer-reviews.html">
+                                <i class="fa-solid fa-user">
+                                </i>Customer Reviews</a>
+                                <a class="" href="chef-messages.html">
+                                  <i class="fa-solid fa-message">
+                                  </i>Messages</a>
+                                  <a class="" href="chef-reports.html">
+                                    <i class="fa-solid fa-chart-line">
+                                    </i>Reports</a>
+                                    <a class="" href="chef-profile.html">
+                                      <i class="fa-solid fa-user">
+                                      </i>Profile</a>
+                                    </nav>
+                                    <div class="dash-side-foot">
+                                      <a href="index.html">
+                                        <i class="fa-solid fa-arrow-left">
+                                        </i> Back to site</a>
+                                        <button data-logout>
+                                          <i class="fa-solid fa-right-from-bracket">
+                                          </i> Sign out</button>
+                                        </div>
+                                      </aside>
+                                      <div class="dashboard-main">
+                                        <div class="inline-actions">
+                                          <div>
+                                            <span class="eyebrow">Chef Portal</span>
+                                            <h1>Dashboard</h1>
+                                          </div>
+                                          <div class="dash-actions">
+                                            <div class="dash-user">
+                                              <i class="fa-solid fa-circle-user">
+                                              </i>
+                                              <div>
+                                                <strong data-user-name>Demo User</strong>
+                                                <span data-user-email>guest@stackly.com</span>
+                                              </div>
+                                            </div>
+                                            <a class="btn btn-primary" href="404.html">
+                                              <i class="fa-solid fa-plus">
+                                              </i> New Booking</a>
+                                            </div>
+                                          </div>
+                                          <div id="dashPanel">
+                                            <div class="widget-grid">
+                                              <div class="widget">
+                                                <span>Reservations</span>
+                                                <strong>2</strong>
+                                              </div>
+                                              <div class="widget">
+                                                <span>Orders</span>
+                                                <strong>3</strong>
+                                              </div>
+                                              <div class="widget">
+                                                <span>Revenue</span>
+                                                <strong>$42.8k</strong>
+                                              </div>
+                                              <div class="widget">
+                                                <span>Guests</span>
+                                                <strong>744</strong>
+                                              </div>
+                                            </div>
+                                            <div class="chart-grid">
+                                              <div class="chart-card">
+                                                <h3>Monthly Revenue</h3>
+                                                <div class="bar-chart">
+                                                  <div class="bar" style="height:32%">
+                                                    <span>32</span>
+                                                  </div>
+                                                  <div class="bar" style="height:55%">
+                                                    <span>55</span>
+                                                  </div>
+                                                  <div class="bar" style="height:46%">
+                                                    <span>46</span>
+                                                  </div>
+                                                  <div class="bar" style="height:68%">
+                                                    <span>68</span>
+                                                  </div>
+                                                  <div class="bar" style="height:72%">
+                                                    <span>72</span>
+                                                  </div>
+                                                  <div class="bar" style="height:88%">
+                                                    <span>88</span>
+                                                  </div>
+                                                  <div class="bar" style="height:78%">
+                                                    <span>78</span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="chart-card">
+                                                <h3>Popular Dishes</h3>
+                                                <div class="bar-chart">
+                                                  <div class="bar" style="height:86%">
+                                                    <span>86</span>
+                                                  </div>
+                                                  <div class="bar" style="height:64%">
+                                                    <span>64</span>
+                                                  </div>
+                                                  <div class="bar" style="height:42%">
+                                                    <span>42</span>
+                                                  </div>
+                                                  <div class="bar" style="height:38%">
+                                                    <span>38</span>
+                                                  </div>
+                                                  <div class="bar" style="height:92%">
+                                                    <span>92</span>
+                                                  </div>
+                                                  <div class="bar" style="height:34%">
+                                                    <span>34</span>
+                                                  </div>
+                                                  <div class="bar" style="height:24%">
+                                                    <span>24</span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <section class="section mt-0">
+                                              <div class="grid grid-2">
+                                                <div>
+                                                  <div class="table-wrap">
+                                                    <table>
+                                                      <thead>
+                                                        <tr>
+                                                          <th>ID</th>
+                                                          <th>Guest</th>
+                                                          <th>Date</th>
+                                                          <th>Time</th>
+                                                          <th>Status</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td>RSV-1082</td>
+                                                          <td>Amelia Hart</td>
+                                                          <td>2026-08-12</td>
+                                                          <td>20:00</td>
+                                                          <td>
+                                                            <span class="status success">Confirmed</span>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>RSV-1083</td>
+                                                          <td>Nikhil Shah</td>
+                                                          <td>2026-08-14</td>
+                                                          <td>19:30</td>
+                                                          <td>
+                                                            <span class="status warning">Pending</span>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div class="table-wrap">
+                                                    <table>
+                                                      <thead>
+                                                        <tr>
+                                                          <th>ID</th>
+                                                          <th>Guest</th>
+                                                          <th>Dish</th>
+                                                          <th>Total</th>
+                                                          <th>Status</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td>ORD-7721</td>
+                                                          <td>Maya Lin</td>
+                                                          <td>Saffron Lobster Veloute</td>
+                                                          <td>$86</td>
+                                                          <td>
+                                                            <span class="status warning">Pending</span>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>ORD-7722</td>
+                                                          <td>Jon Bell</td>
+                                                          <td>Truffle Morel Risotto</td>
+                                                          <td>$64</td>
+                                                          <td>
+                                                            <span class="status success">Completed</span>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>ORD-7723</td>
+                                                          <td>Ava Stone</td>
+                                                          <td>Charcoal Paneer Royal</td>
+                                                          <td>$42</td>
+                                                          <td>
+                                                            <span class="status info">Preparing</span>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </section>
+                                          </div>
+                                          <section class="section mt-0">
+                                            <div class="inline-actions">
+                                              <div>
+                                                <span class="eyebrow">Today's Prep</span>
+                                                <h2>Ordered by when it has to be finished.</h2>
+                                              </div>
+                                            </div>
+                                            <div class="table-wrap">
+                                              <table>
+                                                <thead>
+                                                  <tr>
+                                                    <th>Task</th>
+                                                    <th>Station</th>
+                                                    <th>Owner</th>
+                                                    <th>Due</th>
+                                                    <th>Status</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Skim and pass the veal stock</td>
+                                                    <td>Sauce</td>
+                                                    <td>L. Fontaine</td>
+                                                    <td>08:30</td>
+                                                    <td>
+                                                      <span class="status success">Done</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Laminate the morning pastry</td>
+                                                    <td>Pastry</td>
+                                                    <td>A. Rao</td>
+                                                    <td>09:00</td>
+                                                    <td>
+                                                      <span class="status success">Done</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Split and season fruitwood</td>
+                                                    <td>Fire</td>
+                                                    <td>T. Ilić</td>
+                                                    <td>10:30</td>
+                                                    <td>
+                                                      <span class="status warning">In progress</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Portion lobster for 40 covers</td>
+                                                    <td>Garde manger</td>
+                                                    <td>P. Nandan</td>
+                                                    <td>11:00</td>
+                                                    <td>
+                                                      <span class="status warning">In progress</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Taste and log September ferments</td>
+                                                    <td>Garde manger</td>
+                                                    <td>P. Nandan</td>
+                                                    <td>15:00</td>
+                                                    <td>
+                                                      <span class="status info">Not started</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Rewrite specials board</td>
+                                                    <td>Pass</td>
+                                                    <td>Head chef</td>
+                                                    <td>17:30</td>
+                                                    <td>
+                                                      <span class="status info">Not started</span>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </section>
+                                          <section class="section mt-0">
+                                            <div class="inline-actions">
+                                              <div>
+                                                <span class="eyebrow">Inventory Watch</span>
+                                                <h2>What could stop a dish tonight.</h2>
+                                              </div>
+                                            </div>
+                                            <div class="grid grid-3">
+                                              <article class="card card-body">
+                                                <span class="tag">Critical</span>
+                                                <h3>Lobster, 12 portions left</h3>
+                                                <p>Enough for first seating only. Either cap the veloute on the board or pull it after 8 PM. Next delivery is Thursday morning.</p>
+                                              </article>
+                                              <article class="card card-body">
+                                                <span class="tag">Low</span>
+                                                <h3>Black truffle, 180g</h3>
+                                                <p>Two services at current pace. The risotto is the only dish drawing on it, so it holds unless the counter runs long.</p>
+                                              </article>
+                                              <article class="card card-body">
+                                                <span class="tag">Watch</span>
+                                                <h3>Cultured butter, Thursday churn</h3>
+                                                <p>Wren Valley churns to order. Confirm tomorrow's quantity before four or we cook Friday without it.</p>
+                                              </article>
+                                            </div>
+                                          </section>
+                                          <section class="section mt-0">
+                                            <div class="inline-actions">
+                                              <div>
+                                                <span class="eyebrow">Tonight's Stations</span>
+                                                <h2>Brigade assignments for dinner service.</h2>
+                                              </div>
+                                            </div>
+                                            <div class="table-wrap">
+                                              <table>
+                                                <thead>
+                                                  <tr>
+                                                    <th>Station</th>
+                                                    <th>Chef</th>
+                                                    <th>Covers</th>
+                                                    <th>Dishes</th>
+                                                    <th>Status</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Sauce</td>
+                                                    <td>L. Fontaine</td>
+                                                    <td>All</td>
+                                                    <td>Wagyu, lobster, risotto</td>
+                                                    <td>
+                                                      <span class="status success">Ready</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Fire</td>
+                                                    <td>T. Ilić</td>
+                                                    <td>All</td>
+                                                    <td>Wagyu, paneer, leek</td>
+                                                    <td>
+                                                      <span class="status success">Ready</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Garde manger</td>
+                                                    <td>P. Nandan</td>
+                                                    <td>All</td>
+                                                    <td>Tartare, burrata, consomme</td>
+                                                    <td>
+                                                      <span class="status warning">Prep running</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Pastry</td>
+                                                    <td>A. Rao</td>
+                                                    <td>All</td>
+                                                    <td>Panna cotta, petit fours</td>
+                                                    <td>
+                                                      <span class="status success">Ready</span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Counter</td>
+                                                    <td>Head chef</td>
+                                                    <td>24</td>
+                                                    <td>Two seatings, no printed menu</td>
+                                                    <td>
+                                                      <span class="status info">7 PM and 9 PM</span>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </section>
+                                        </div>
+                                      </div>
+                                    </main>
+                                    <script src="assets/js/storage.js">
+                                    </script>
+                                    <script src="assets/js/toast.js">
+                                    </script>
+                                    <script src="assets/js/modal.js">
+                                    </script>
+                                    <script src="assets/js/auth.js">
+                                    </script>
+                                    <script src="assets/js/menu.js">
+                                    </script>
+                                    <script src="assets/js/gallery.js">
+                                    </script>
+                                    <script src="assets/js/reservation.js">
+                                    </script>
+                                    <script src="assets/js/dashboard.js">
+                                    </script>
+                                    <script src="assets/js/charts.js">
+                                    </script>
+                                    <script src="assets/js/validation.js">
+                                    </script>
+                                    <script src="assets/js/darkmode.js">
+                                    </script>
+                                    <script src="assets/js/slider.js">
+                                    </script>
+                                    <script src="assets/js/animations.js"></script>
+                                    <script src="assets/js/main.js">
+                                    </script>
+                                  </body>
+                                </html>

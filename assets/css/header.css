@@ -1,0 +1,25 @@
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(15,27,29,.76); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); }
+.nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); color: var(--heading); font-size: 1.55rem; font-weight: 800; }
+.brand img { height: 42px; width: auto; max-width: 210px; object-fit: contain; display: block; }
+.site-footer .brand img { height: 46px; max-width: 230px; }
+body.light-mode .brand img { filter: brightness(.25); }
+.nav-links { display: flex; align-items: center; gap: 18px; }
+.nav-links a { color: var(--light); font-weight: 600; font-size: .94rem; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.mega { position: relative; }
+.mega-panel { position: absolute; right: 0; top: 42px; width: 520px; display: none; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 18px; border-radius: var(--radius); }
+.mega:hover .mega-panel, .mega.open .mega-panel { display: grid; }
+.mega-panel a { padding: 10px 12px; border-radius: var(--radius); background: rgba(255,255,255,.04); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.icon-btn { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--border); background: var(--glass); color: var(--heading); cursor: pointer; }
+.nav-auth { min-height: 42px; padding: 9px 16px; font-size: .92rem; white-space: nowrap; }
+/* Account controls duplicated inside the hamburger panel; desktop hides them
+   and keeps the header copies. Swapped over at the 980px breakpoint. */
+.nav-auth-mobile { display: none; }
+.hamburger { display: none; }
+.profile-menu { position: relative; }
+.profile-dropdown { position: absolute; right: 0; top: 50px; display: none; min-width: 190px; padding: 10px; border-radius: var(--radius); }
+.profile-menu.open .profile-dropdown { display: grid; }
+.profile-dropdown a, .profile-dropdown button { text-align: left; padding: 10px; border: 0; background: transparent; color: var(--text); cursor: pointer; border-radius: var(--radius); }
+.profile-dropdown a:hover, .profile-dropdown button:hover { background: rgba(255,255,255,.07); color: var(--gold); }

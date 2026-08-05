@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Profile | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="profile">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav-auth-mobile">
+            <a class="btn btn-ghost" href="login.html">
+              <i class="fa-solid fa-right-to-bracket">
+              </i> Login</a>
+              <a class="btn btn-primary" href="register.html">
+                <i class="fa-solid fa-user-plus">
+                </i> Register</a>
+              </div>
+            </nav>
+            <div class="nav-actions">
+              <a class="btn btn-ghost nav-auth" href="login.html">
+                <i class="fa-solid fa-right-to-bracket">
+                </i> Login</a>
+                <a class="btn btn-primary nav-auth" href="register.html">
+                  <i class="fa-solid fa-user-plus">
+                  </i> Register</a>
+                  <button class="icon-btn hamburger" title="Menu">
+                    <i class="fa-solid fa-bars">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main id="app">
+              <section class="page-hero">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?fm=webp&fit=crop&w=1280&q=68" alt="Profile">
+                <div class="container">
+                  <span class="eyebrow">Stackly</span>
+                  <h1>Profile</h1>
+                  <p class="lead">Manage your guest identity, preferences, and dining notes.</p>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container split">
+                  <div class="surface-pad">
+                    <span class="eyebrow">Guest Profile</span>
+                    <h2>Your dining identity</h2>
+                    <p class="lead">This demo profile is stored locally on this device, so nothing leaves your browser.</p>
+                    <div class="form-grid mt-2">
+                      <div class="field">
+                        <label>Full name</label>
+                        <input value="Guest" placeholder="Full name">
+                      </div>
+                      <div class="field">
+                        <label>Email</label>
+                        <input type="email" value="customer@stackly.com" placeholder="Email">
+                      </div>
+                      <div class="field">
+                        <label>Phone</label>
+                        <input placeholder="+1 212 555 0000">
+                      </div>
+                      <div class="field">
+                        <label>Home branch</label>
+                        <select>
+                          <option>New York - Astor Flagship</option>
+                          <option>London - Marylebone House</option>
+                          <option>Dubai - Marina Terrace</option>
+                          <option>Mumbai - Colaba Pavilion</option>
+                          <option>Singapore - Keong Saik Salon</option>
+                          <option>Paris - Rue Saint-Marc</option>
+                          <option>Tokyo - Aoyama Counter</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Dining notes for the kitchen</label>
+                      <textarea placeholder="Allergies, seating preference, occasions we should remember">
+                      </textarea>
+                    </div>
+                    <button class="btn btn-primary mt-2">Save Profile</button>
+                  </div>
+                  <div>
+                    <span class="eyebrow">At a Glance</span>
+                    <h2>Your history with the room.</h2>
+                    <p class="lead">Everything below is drawn from your demo bookings and saved favourites.</p>
+                    <div class="stat-row mt-2">
+                      <div class="stat">
+                        <strong data-count="14">0</strong>
+                        <span>Visits</span>
+                      </div>
+                      <div class="stat">
+                        <strong data-count="6">0</strong>
+                        <span>Favourites</span>
+                      </div>
+                      <div class="stat">
+                        <strong data-count="3">0</strong>
+                        <span>Branches</span>
+                      </div>
+                      <div class="stat">
+                        <strong data-count="2">0</strong>
+                        <span>Events</span>
+                      </div>
+                    </div>
+                    <div class="surface-pad mt-3">
+                      <p>
+                        <strong>Member tier:</strong> Cellar Member</p>
+                        <p>
+                          <strong>Joined:</strong> March 2023</p>
+                          <p>
+                            <strong>Usual table:</strong> Counter, seats 7 and 8</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="section alt">
+                      <div class="container section-head">
+                        <div>
+                          <span class="eyebrow">Saved Dishes</span>
+                          <h2>Favourites you have marked.</h2>
+                        </div>
+                        <a class="btn btn-ghost" href="menu.html">Browse Menu</a>
+                      </div>
+                      <div class="container grid grid-3">
+                        <article class="card image-card menu-card" data-dish="1">
+                          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?fm=webp&fit=crop&w=760&q=38" alt="Saffron Lobster Veloute">
+                          <div class="card-body">
+                            <div class="menu-title-row">
+                              <div>
+                                <span class="tag">Non-Veg</span>
+                                <h3>Saffron Lobster Veloute</h3>
+                              </div>
+                              <button class="favorite" data-fav="1" title="Favorite">
+                                <i class="fa-solid fa-heart">
+                                </i>
+                              </button>
+                            </div>
+                            <p>Butter-poached lobster, saffron cream, fennel pollen, and smoked caviar.</p>
+                            <div class="dish-meta">
+                              <span>
+                                <i class="fa-regular fa-clock">
+                                </i> 28 min</span>
+                                <span>
+                                  <i class="fa-solid fa-star">
+                                  </i> Chef pick</span>
+                                </div>
+                                <div class="inline-actions">
+                                  <span class="price">$86</span>
+                                  <a class="btn btn-ghost" href="404.html">Details</a>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="card image-card menu-card" data-dish="2">
+                              <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?fm=webp&fit=crop&w=760&q=80" alt="Truffle Morel Risotto">
+                              <div class="card-body">
+                                <div class="menu-title-row">
+                                  <div>
+                                    <span class="tag">Italian</span>
+                                    <h3>Truffle Morel Risotto</h3>
+                                  </div>
+                                  <button class="favorite" data-fav="2" title="Favorite">
+                                    <i class="fa-regular fa-heart">
+                                    </i>
+                                  </button>
+                                </div>
+                                <p>Carnaroli rice folded with black truffle, morels, parmesan, and aged balsamic.</p>
+                                <div class="dish-meta">
+                                  <span>
+                                    <i class="fa-regular fa-clock">
+                                    </i> 24 min</span>
+                                    <span>
+                                      <i class="fa-solid fa-star">
+                                      </i> Chef pick</span>
+                                    </div>
+                                    <div class="inline-actions">
+                                      <span class="price">$64</span>
+                                      <a class="btn btn-ghost" href="404.html">Details</a>
+                                    </div>
+                                  </div>
+                                </article>
+                                <article class="card image-card menu-card" data-dish="3">
+                                  <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?fm=webp&fit=crop&w=760&q=50" alt="Charcoal Paneer Royal">
+                                  <div class="card-body">
+                                    <div class="menu-title-row">
+                                      <div>
+                                        <span class="tag">Indian</span>
+                                        <h3>Charcoal Paneer Royal</h3>
+                                      </div>
+                                      <button class="favorite" data-fav="3" title="Favorite">
+                                        <i class="fa-regular fa-heart">
+                                        </i>
+                                      </button>
+                                    </div>
+                                    <p>Tandoor paneer, cashew silk curry, fenugreek, and edible gold dust.</p>
+                                    <div class="dish-meta">
+                                      <span>
+                                        <i class="fa-regular fa-clock">
+                                        </i> 22 min</span>
+                                        <span>
+                                          <i class="fa-solid fa-star">
+                                          </i> Chef pick</span>
+                                        </div>
+                                        <div class="inline-actions">
+                                          <span class="price">$42</span>
+                                          <a class="btn btn-ghost" href="404.html">Details</a>
+                                        </div>
+                                      </div>
+                                    </article>
+                                  </div>
+                                </section>
+                                <section class="section">
+                                  <div class="container section-head">
+                                    <div>
+                                      <span class="eyebrow">Recent Reservations</span>
+                                      <h2>Your last four bookings.</h2>
+                                    </div>
+                                  </div>
+                                  <div class="container">
+                                    <div class="table-wrap">
+                                      <table>
+                                        <thead>
+                                          <tr>
+                                            <th>Reference</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Guests</th>
+                                            <th>Room</th>
+                                            <th>Status</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>RSV-4821</td>
+                                            <td>14 Aug 2026</td>
+                                            <td>7:30 PM</td>
+                                            <td>2</td>
+                                            <td>Astor Flagship</td>
+                                            <td>
+                                              <span class="status success">Confirmed</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>RSV-4610</td>
+                                            <td>02 Aug 2026</td>
+                                            <td>8:00 PM</td>
+                                            <td>4</td>
+                                            <td>Astor Flagship</td>
+                                            <td>
+                                              <span class="status info">Completed</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>RSV-4388</td>
+                                            <td>19 Jul 2026</td>
+                                            <td>1:00 PM</td>
+                                            <td>6</td>
+                                            <td>Cellar Library</td>
+                                            <td>
+                                              <span class="status info">Completed</span>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>RSV-4102</td>
+                                            <td>28 Jun 2026</td>
+                                            <td>9:00 PM</td>
+                                            <td>2</td>
+                                            <td>The Pass</td>
+                                            <td>
+                                              <span class="status warning">Cancelled</span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </section>
+                                <section class="section alt">
+                                  <div class="container split">
+                                    <div>
+                                      <span class="eyebrow">Membership</span>
+                                      <h2>Cellar Member since March 2023.</h2>
+                                      <p class="lead">Six visits from Counter Circle, which unlocks a standing counter reservation and waived private room hire twice a year.</p>
+                                      <div class="surface-pad">
+                                        <p>
+                                          <i class="fa-solid fa-check gold">
+                                          </i> Two guaranteed weekend tables a month</p>
+                                          <p>
+                                            <i class="fa-solid fa-check gold">
+                                            </i> 10% off the reserve wine list</p>
+                                            <p>
+                                              <i class="fa-solid fa-check gold">
+                                              </i> First refusal on residency evenings</p>
+                                              <p class="muted mt-2">
+                                                <i class="fa-solid fa-lock">
+                                                </i> Standing counter reservation - Counter Circle only</p>
+                                                <p class="muted">
+                                                  <i class="fa-solid fa-lock">
+                                                  </i> Invitation to every brigade tasting - Counter Circle only</p>
+                                                </div>
+                                                <a class="btn btn-primary mt-2" href="offers.html">
+                                                  <i class="fa-solid fa-arrow-up">
+                                                  </i> Compare Tiers</a>
+                                                </div>
+                                                <div class="media-stack">
+                                                  <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?fm=webp&fit=crop&w=760&q=50" alt="Cellar library">
+                                                  <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?fm=webp&fit=crop&w=760&q=56" alt="Counter seats">
+                                                </div>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Dining Notes on File</span>
+                                                  <h2>What the kitchen already knows about you.</h2>
+                                                </div>
+                                              </div>
+                                              <div class="container grid grid-3">
+                                                <article class="card card-body">
+                                                  <span class="tag">Kitchen</span>
+                                                  <h3>Shellfish allergy, severe</h3>
+                                                  <p>Flagged on every booking since 2023. The kitchen plans a parallel course rather than adapting the plate, and the floor team confirms it at the table before service starts.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">Cellar</span>
+                                                  <h3>Prefers low intervention reds</h3>
+                                                  <p>Elena's note, added after your third visit. It is why the pairing flight you get is never quite the printed one.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">Floor</span>
+                                                  <h3>Counter seats 7 and 8</h3>
+                                                  <p>Requested four times, so it is now the default whenever the counter is available on your booking date.</p>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section alt">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Account Activity</span>
+                                                  <h2>The last few things that happened.</h2>
+                                                </div>
+                                              </div>
+                                              <div class="container">
+                                                <div class="table-wrap">
+                                                  <table>
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Date</th>
+                                                        <th>Activity</th>
+                                                        <th>Detail</th>
+                                                        <th>Status</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>02 Aug 2026</td>
+                                                        <td>Reservation confirmed</td>
+                                                        <td>RSV-4821, two guests, Astor</td>
+                                                        <td>
+                                                          <span class="status success">Confirmed</span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>29 Jul 2026</td>
+                                                        <td>Favourite added</td>
+                                                        <td>Saffron Lobster Veloute</td>
+                                                        <td>
+                                                          <span class="status info">Saved</span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>21 Jul 2026</td>
+                                                        <td>Event seat booked</td>
+                                                        <td>Barolo Cellar Residency</td>
+                                                        <td>
+                                                          <span class="status success">Paid</span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>14 Jul 2026</td>
+                                                        <td>Dietary note updated</td>
+                                                        <td>Shellfish allergy, severe</td>
+                                                        <td>
+                                                          <span class="status success">Applied</span>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>28 Jun 2026</td>
+                                                        <td>Reservation cancelled</td>
+                                                        <td>RSV-4102, outside window</td>
+                                                        <td>
+                                                          <span class="status warning">Refunded</span>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container split">
+                                                <div>
+                                                  <span class="eyebrow">Next Step</span>
+                                                  <h2>Ready for the next one?</h2>
+                                                  <p class="lead">Your preferences are already saved, so booking takes about thirty seconds.</p>
+                                                  <div class="hero-actions">
+                                                    <a class="btn btn-primary" href="404.html">
+                                                      <i class="fa-solid fa-calendar-check">
+                                                      </i> Reserve a Table</a>
+                                                      <a class="btn btn-ghost" href="settings.html">
+                                                        <i class="fa-solid fa-sliders">
+                                                        </i> Manage Settings</a>
+                                                      </div>
+                                                    </div>
+                                                    <div class="media-stack">
+                                                      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Stackly dining room">
+                                                      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?fm=webp&fit=crop&w=760&q=80" alt="Plated course">
+                                                    </div>
+                                                  </div>
+                                                </section>
+                                              </main>
+                                              <footer class="site-footer">
+                                                <div class="container footer-cta">
+                                                  <div>
+                                                    <span class="eyebrow">The Guest List</span>
+                                                    <h3>Kitchen notes, and residency seats before they go public.</h3>
+                                                  </div>
+                                                  <form class="newsletter" data-newsletter>
+                                                    <input name="email" type="email" placeholder="Your email address" required>
+                                                    <button class="btn btn-primary">
+                                                      <i class="fa-solid fa-paper-plane">
+                                                      </i> Subscribe</button>
+                                                    </form>
+                                                  </div>
+                                                  <div class="container footer-grid">
+                                                    <div class="footer-brand">
+                                                      <a class="brand" href="404.html">
+                                                        <img src="assets/images/stackly-logo.webp" alt="Stackly">
+                                                      </a>
+                                                      <p>Luxury fine dining, cinematic tasting menus, private salons, and chef-led hospitality across seven city rooms.</p>
+                                                      <div class="socials">
+                                                        <a class="social" href="404.html" aria-label="Stackly on Instagram" title="Instagram">
+                                                          <i class="fa-brands fa-instagram">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on Facebook" title="Facebook">
+                                                          <i class="fa-brands fa-facebook-f">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on X" title="X">
+                                                          <i class="fa-brands fa-x-twitter">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on YouTube" title="YouTube">
+                                                          <i class="fa-brands fa-youtube">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on TikTok" title="TikTok">
+                                                          <i class="fa-brands fa-tiktok">
+                                                          </i>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Restaurant</h4>
+                                                      <a href="404.html">About Us</a>
+                                                      <a href="404.html">Our Story</a>
+                                                      <a href="404.html">Our Chefs</a>
+                                                      <a href="404.html">Branches</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Experience</h4>
+                                                      <a href="404.html">Our Menu</a>
+                                                      <a href="404.html">Reservations</a>
+                                                      <a href="404.html">Events</a>
+                                                      <a href="404.html">Private Dining</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Support</h4>
+                                                      <a href="404.html">Contact</a>
+                                                      <a href="404.html">FAQ</a>
+                                                      <a href="404.html">Journal</a>
+                                                      <a href="404.html">Offers</a>
+                                                    </div>
+                                                    <div class="footer-col footer-contact">
+                                                      <h4>Visit Us</h4>
+                                                      <p>
+                                                        <i class="fa-solid fa-location-dot">
+                                                        </i>
+                                                        <span>12 Astor Lane, New York</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-phone">
+                                                        </i>
+                                                        <span>+1 212 555 0198</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-envelope">
+                                                        </i>
+                                                        <span>concierge@stackly.example</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-regular fa-clock">
+                                                        </i>
+                                                        <span>Open daily, 12 PM - 12 AM</span>
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="container footer-bottom">
+                                                    <span>© 2026 Stackly. Crafted for fine dining.</span>
+                                                    <span class="footer-legal">
+                                                      <a href="404.html">Privacy</a>
+                                                      <a href="404.html">Terms</a>
+                                                      <a href="404.html">Press</a>
+                                                    </span>
+                                                  </div>
+                                                </footer>
+                                                <script src="assets/js/storage.js">
+                                                </script>
+                                                <script src="assets/js/toast.js">
+                                                </script>
+                                                <script src="assets/js/modal.js">
+                                                </script>
+                                                <script src="assets/js/auth.js">
+                                                </script>
+                                                <script src="assets/js/menu.js">
+                                                </script>
+                                                <script src="assets/js/gallery.js">
+                                                </script>
+                                                <script src="assets/js/reservation.js">
+                                                </script>
+                                                <script src="assets/js/dashboard.js">
+                                                </script>
+                                                <script src="assets/js/charts.js">
+                                                </script>
+                                                <script src="assets/js/validation.js">
+                                                </script>
+                                                <script src="assets/js/darkmode.js">
+                                                </script>
+                                                <script src="assets/js/slider.js">
+                                                </script>
+                                                <script src="assets/js/animations.js"></script>
+                                                <script src="assets/js/main.js">
+                                                </script>
+                                              </body>
+                                            </html>

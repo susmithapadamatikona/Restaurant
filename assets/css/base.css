@@ -1,0 +1,71 @@
+/* Base element and layout rules.
+   Split out of style.css so that responsive.css can be imported AFTER it:
+   @import rules apply at their position in the file, so while these lived at
+   the bottom of style.css they silently overrode every responsive override. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+body::selection { background: var(--gold); color: #111; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+.page-shell { min-height: 100vh; background: radial-gradient(circle at 20% 5%, rgba(193,148,64,0.11), transparent 30%), var(--bg); }
+.container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+.section { padding: 92px 0; background: var(--bg); }
+.section.alt { background: var(--section); }
+.eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; font-weight: 700; }
+h1,h2,h3,h4 { margin: 0 0 14px; color: var(--heading); font-family: var(--font-heading); line-height: 1.08; letter-spacing: 0; }
+h1 { font-size: clamp(3rem, 8vw, 6.8rem); }
+h2 { font-size: clamp(2rem, 5vw, 4rem); }
+h3 { font-size: 1.45rem; }
+p { margin: 0 0 18px; color: var(--light); }
+.lead { font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 760px; }
+.section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 34px; }
+.section-head p { max-width: 560px; margin: 0; }
+.grid { display: grid; gap: 22px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.glass {
+  background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+.lux-line { width: 84px; height: 2px; background: var(--gold-gradient); margin: 18px 0 24px; }
+.split { display: grid; grid-template-columns: 1.05fr .95fr; gap: 38px; align-items: center; }
+.media-stack { position: relative; min-height: 420px; }
+.media-stack img { width: 76%; height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.media-stack img:nth-child(2) { position: absolute; right: 0; bottom: 0; width: 52%; height: 230px; }
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat { padding: 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.stat strong { display: block; color: var(--gold); font-size: 2rem; font-family: var(--font-heading); }
+.toast-wrap { position: fixed; right: 18px; top: 90px; z-index: 60; display: grid; gap: 10px; }
+.toast { min-width: 250px; padding: 13px 16px; border-radius: var(--radius); background: #18211f; border: 1px solid var(--border); box-shadow: var(--shadow); animation: slideIn .25s ease; }
+.toast.success { border-left: 4px solid var(--success); }
+.toast.error { border-left: 4px solid var(--error); }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.68); display: none; place-items: center; z-index: 70; padding: 20px; }
+.modal-backdrop.active { display: grid; }
+.modal { max-width: 560px; width: 100%; padding: 28px; border-radius: var(--radius); background: var(--section); border: 1px solid var(--border); }
+.progress { position: fixed; inset: 0 0 auto; height: 3px; background: var(--gold-gradient); width: 0; z-index: 80; }
+.back-top { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--gold); color: #111; display: none; place-items: center; z-index: 40; }
+.back-top.show { display: grid; }
+.loader { position: fixed; inset: 0; background: var(--bg); z-index: 100; display: grid; place-items: center; transition: opacity .35s ease, visibility .35s ease; }
+.loader.hide { opacity: 0; visibility: hidden; }
+/* Splash: brand mark over a sliding progress line. */
+.loader-inner { display: grid; justify-items: center; gap: 22px; }
+.loader-logo { width: min(240px, 56vw); height: auto; animation: loaderPulse 1.7s ease-in-out infinite; }
+.loader-bar { display: block; width: min(240px, 56vw); height: 2px; border-radius: 99px; background: rgba(255,255,255,.1); overflow: hidden; }
+.loader-bar span { display: block; width: 38%; height: 100%; border-radius: 99px; background: var(--gold-gradient); animation: loaderSlide 1.15s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .loader-logo, .loader-bar span { animation: none; }
+  .loader-bar span { width: 100%; }
+}
+.cursor-dot { position: fixed; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); pointer-events: none; z-index: 90; transform: translate(-50%, -50%); opacity: .8; }

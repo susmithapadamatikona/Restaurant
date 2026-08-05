@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reservations | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="reservation">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav-auth-mobile">
+            <a class="btn btn-ghost" href="login.html">
+              <i class="fa-solid fa-right-to-bracket">
+              </i> Login</a>
+              <a class="btn btn-primary" href="register.html">
+                <i class="fa-solid fa-user-plus">
+                </i> Register</a>
+              </div>
+            </nav>
+            <div class="nav-actions">
+              <a class="btn btn-ghost nav-auth" href="login.html">
+                <i class="fa-solid fa-right-to-bracket">
+                </i> Login</a>
+                <a class="btn btn-primary nav-auth" href="register.html">
+                  <i class="fa-solid fa-user-plus">
+                  </i> Register</a>
+                  <button class="icon-btn hamburger" title="Menu">
+                    <i class="fa-solid fa-bars">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main id="app">
+              <section class="page-hero">
+                <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?fm=webp&fit=crop&w=1280&q=38" alt="Reservations">
+                <div class="container">
+                  <span class="eyebrow">Stackly</span>
+                  <h1>Reservations</h1>
+                  <p class="lead">Book the room, the table, and the little moments around it.</p>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container split">
+                  <div>
+                    <span class="eyebrow">Concierge</span>
+                    <h2>Reserve an evening with intention.</h2>
+                    <p class="lead">Choose your date, guest count, and special requests. Stackly stores demo bookings locally so every dashboard updates instantly.</p>
+                    <p>Tell us the occasion in the notes field. It is the difference between a table and an evening that was clearly planned for you, and it costs nothing to mention.</p>
+                  </div>
+                  <form class="form surface-pad" data-reservation>
+                    <input name="name" placeholder="Guest name" required>
+                    <input name="date" type="date" required>
+                    <input name="time" type="time" required>
+                    <input name="guests" type="number" min="1" max="18" placeholder="Guests" required>
+                    <textarea name="request" placeholder="Occasion, allergies, seating preference">
+                    </textarea>
+                    <button class="btn btn-primary">
+                      <i class="fa-solid fa-calendar-check">
+                      </i> Reserve</button>
+                    </form>
+                  </div>
+                </section>
+                <section class="section alt">
+                  <div class="container section-head">
+                    <div>
+                      <span class="eyebrow">Service Times</span>
+                      <h2>When each sitting runs.</h2>
+                    </div>
+                  </div>
+                  <div class="container grid grid-3">
+                    <article class="card card-body">
+                      <span class="tag">Lunch</span>
+                      <h3>12:00 PM - 3:00 PM</h3>
+                      <p>A shorter four-course carte, seven days a week. The last lunch order goes in at 2:30 PM.</p>
+                    </article>
+                    <article class="card card-body">
+                      <span class="tag">Dinner</span>
+                      <h3>6:00 PM - 11:15 PM</h3>
+                      <p>Full carte and the tasting menu. The kitchen closes at 11:15 PM but the room stays open until midnight.</p>
+                    </article>
+                    <article class="card card-body">
+                      <span class="tag">Chef Counter</span>
+                      <h3>7:00 PM and 9:00 PM</h3>
+                      <p>Two seatings nightly, twelve seats each. Book roughly six weeks ahead for a weekend.</p>
+                    </article>
+                  </div>
+                </section>
+                <section class="section">
+                  <div class="container section-head">
+                    <div>
+                      <span class="eyebrow">Before You Book</span>
+                      <h2>Four things worth knowing.</h2>
+                    </div>
+                  </div>
+                  <div class="container grid grid-4">
+                    <article class="card card-body">
+                      <span class="tag">01</span>
+                      <h3>Deposits</h3>
+                      <p>Only the chef table and private rooms take a deposit, and it comes straight off your final bill.</p>
+                    </article>
+                    <article class="card card-body">
+                      <span class="tag">02</span>
+                      <h3>Cancellations</h3>
+                      <p>Free to change or cancel up to 48 hours ahead. Inside that window the deposit is retained.</p>
+                    </article>
+                    <article class="card card-body">
+                      <span class="tag">03</span>
+                      <h3>Dietary notes</h3>
+                      <p>Give us 48 hours and the kitchen rebuilds the menu around you rather than removing courses.</p>
+                    </article>
+                    <article class="card card-body">
+                      <span class="tag">04</span>
+                      <h3>Large parties</h3>
+                      <p>Nine guests or more moves to the private dining team, who will plan the menu with you directly.</p>
+                    </article>
+                  </div>
+                </section>
+                <section class="section alt">
+                  <div class="container split">
+                    <div>
+                      <span class="eyebrow">Need Something Else?</span>
+                      <h2>Bigger table, private room, or a whole floor.</h2>
+                      <p class="lead">Parties over eight are handled by the events desk with a dedicated lead who stays in the room for the evening.</p>
+                      <div class="hero-actions">
+                        <a class="btn btn-primary" href="404.html">
+                          <i class="fa-solid fa-champagne-glasses">
+                          </i> Private Dining</a>
+                          <a class="btn btn-ghost" href="404.html">
+                            <i class="fa-solid fa-location-dot">
+                            </i> Other Branches</a>
+                          </div>
+                        </div>
+                        <div class="media-stack">
+                          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Private room">
+                          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?fm=webp&fit=crop&w=760&q=56" alt="Table setting">
+                        </div>
+                      </div>
+                    </section>
+                    <section class="section">
+                      <div class="container section-head">
+                        <div>
+                          <span class="eyebrow">After You Book</span>
+                          <h2>What happens between now and the table.</h2>
+                        </div>
+                      </div>
+                      <div class="container grid grid-4">
+                        <article class="card card-body">
+                          <span class="tag">Immediately</span>
+                          <h3>Written confirmation</h3>
+                          <p>A reference number, the room, and the exact time. Keep it, because every later change is handled against that reference.</p>
+                        </article>
+                        <article class="card card-body">
+                          <span class="tag">Morning of</span>
+                          <h3>Kitchen briefing</h3>
+                          <p>Your dietary notes and occasion reach the full brigade and floor team at the eleven o'clock briefing, before anyone starts cooking.</p>
+                        </article>
+                        <article class="card card-body">
+                          <span class="tag">On arrival</span>
+                          <h3>The table is already set</h3>
+                          <p>Seating preference applied, allergies confirmed quietly at the table rather than announced, and any occasion timed to land when you asked.</p>
+                        </article>
+                        <article class="card card-body">
+                          <span class="tag">Next morning</span>
+                          <h3>One short survey</h3>
+                          <p>Four questions, no incentive to answer. It goes straight to the kitchen and the floor, unfiltered and with your name attached if you leave one.</p>
+                        </article>
+                      </div>
+                    </section>
+                    <section class="section alt">
+                      <div class="container section-head">
+                        <div>
+                          <span class="eyebrow">Availability by Room</span>
+                          <h2>Roughly how far ahead to book.</h2>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="table-wrap">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th>Room</th>
+                                <th>Weeknight</th>
+                                <th>Weekend</th>
+                                <th>Chef Counter</th>
+                                <th>Deposit</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Astor Flagship, New York</td>
+                                <td>Same day</td>
+                                <td>3 weeks</td>
+                                <td>6 weeks</td>
+                                <td>Counter only</td>
+                              </tr>
+                              <tr>
+                                <td>Marylebone House, London</td>
+                                <td>Same day</td>
+                                <td>2 weeks</td>
+                                <td>5 weeks</td>
+                                <td>Counter only</td>
+                              </tr>
+                              <tr>
+                                <td>Marina Terrace, Dubai</td>
+                                <td>Same day</td>
+                                <td>2 weeks</td>
+                                <td>4 weeks</td>
+                                <td>Counter only</td>
+                              </tr>
+                              <tr>
+                                <td>Colaba Pavilion, Mumbai</td>
+                                <td>2 days</td>
+                                <td>3 weeks</td>
+                                <td>5 weeks</td>
+                                <td>Counter only</td>
+                              </tr>
+                              <tr>
+                                <td>Keong Saik Salon, Singapore</td>
+                                <td>1 week</td>
+                                <td>4 weeks</td>
+                                <td>8 weeks</td>
+                                <td>All bookings</td>
+                              </tr>
+                              <tr>
+                                <td>Aoyama Counter, Tokyo</td>
+                                <td>3 weeks</td>
+                                <td>7 weeks</td>
+                                <td>Counter only room</td>
+                                <td>All bookings</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <p class="muted mt-2">Cancellations release seats constantly, so a full weekend is always worth a phone call on the day.</p>
+                      </div>
+                    </section>
+                  </main>
+                  <footer class="site-footer">
+                    <div class="container footer-cta">
+                      <div>
+                        <span class="eyebrow">The Guest List</span>
+                        <h3>Kitchen notes, and residency seats before they go public.</h3>
+                      </div>
+                      <form class="newsletter" data-newsletter>
+                        <input name="email" type="email" placeholder="Your email address" required>
+                        <button class="btn btn-primary">
+                          <i class="fa-solid fa-paper-plane">
+                          </i> Subscribe</button>
+                        </form>
+                      </div>
+                      <div class="container footer-grid">
+                        <div class="footer-brand">
+                          <a class="brand" href="404.html">
+                            <img src="assets/images/stackly-logo.webp" alt="Stackly">
+                          </a>
+                          <p>Luxury fine dining, cinematic tasting menus, private salons, and chef-led hospitality across seven city rooms.</p>
+                          <div class="socials">
+                            <a class="social" href="404.html" aria-label="Stackly on Instagram" title="Instagram">
+                              <i class="fa-brands fa-instagram">
+                              </i>
+                            </a>
+                            <a class="social" href="404.html" aria-label="Stackly on Facebook" title="Facebook">
+                              <i class="fa-brands fa-facebook-f">
+                              </i>
+                            </a>
+                            <a class="social" href="404.html" aria-label="Stackly on X" title="X">
+                              <i class="fa-brands fa-x-twitter">
+                              </i>
+                            </a>
+                            <a class="social" href="404.html" aria-label="Stackly on YouTube" title="YouTube">
+                              <i class="fa-brands fa-youtube">
+                              </i>
+                            </a>
+                            <a class="social" href="404.html" aria-label="Stackly on TikTok" title="TikTok">
+                              <i class="fa-brands fa-tiktok">
+                              </i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="footer-col">
+                          <h4>Restaurant</h4>
+                          <a href="404.html">About Us</a>
+                          <a href="404.html">Our Story</a>
+                          <a href="404.html">Our Chefs</a>
+                          <a href="404.html">Branches</a>
+                        </div>
+                        <div class="footer-col">
+                          <h4>Experience</h4>
+                          <a href="404.html">Our Menu</a>
+                          <a href="404.html">Reservations</a>
+                          <a href="404.html">Events</a>
+                          <a href="404.html">Private Dining</a>
+                        </div>
+                        <div class="footer-col">
+                          <h4>Support</h4>
+                          <a href="404.html">Contact</a>
+                          <a href="404.html">FAQ</a>
+                          <a href="404.html">Journal</a>
+                          <a href="404.html">Offers</a>
+                        </div>
+                        <div class="footer-col footer-contact">
+                          <h4>Visit Us</h4>
+                          <p>
+                            <i class="fa-solid fa-location-dot">
+                            </i>
+                            <span>12 Astor Lane, New York</span>
+                          </p>
+                          <p>
+                            <i class="fa-solid fa-phone">
+                            </i>
+                            <span>+1 212 555 0198</span>
+                          </p>
+                          <p>
+                            <i class="fa-solid fa-envelope">
+                            </i>
+                            <span>concierge@stackly.example</span>
+                          </p>
+                          <p>
+                            <i class="fa-regular fa-clock">
+                            </i>
+                            <span>Open daily, 12 PM - 12 AM</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="container footer-bottom">
+                        <span>© 2026 Stackly. Crafted for fine dining.</span>
+                        <span class="footer-legal">
+                          <a href="404.html">Privacy</a>
+                          <a href="404.html">Terms</a>
+                          <a href="404.html">Press</a>
+                        </span>
+                      </div>
+                    </footer>
+                    <script src="assets/js/storage.js">
+                    </script>
+                    <script src="assets/js/toast.js">
+                    </script>
+                    <script src="assets/js/modal.js">
+                    </script>
+                    <script src="assets/js/auth.js">
+                    </script>
+                    <script src="assets/js/menu.js">
+                    </script>
+                    <script src="assets/js/gallery.js">
+                    </script>
+                    <script src="assets/js/reservation.js">
+                    </script>
+                    <script src="assets/js/dashboard.js">
+                    </script>
+                    <script src="assets/js/charts.js">
+                    </script>
+                    <script src="assets/js/validation.js">
+                    </script>
+                    <script src="assets/js/darkmode.js">
+                    </script>
+                    <script src="assets/js/slider.js">
+                    </script>
+                    <script src="assets/js/animations.js"></script>
+                    <script src="assets/js/main.js">
+                    </script>
+                  </body>
+                </html>

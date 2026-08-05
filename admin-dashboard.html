@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Dashboard | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="admin-dashboard">
+    <main id="app">
+      <div class="dashboard-layout">
+        <aside class="sidebar">
+          <a class="dash-brand" href="index.html">
+            <img src="assets/images/stackly-logo.webp" alt="Stackly">
+          </a>
+          <span class="eyebrow">admin Portal</span>
+          <h3 data-user-name>Demo User</h3>
+          <span class="sidebar-email" data-user-email>guest@stackly.com</span>
+          <nav class="dash-nav">
+            <a class="active" href="admin-dashboard.html">
+              <i class="fa-solid fa-diamond">
+              </i>Dashboard</a>
+              <a class="" href="admin-customers.html">
+                <i class="fa-solid fa-user">
+                </i>Customers</a>
+                <a class="" href="admin-reservations.html">
+                  <i class="fa-solid fa-calendar-check">
+                  </i>Reservations</a>
+                  <a class="" href="admin-orders.html">
+                    <i class="fa-solid fa-bell-concierge">
+                    </i>Orders</a>
+                    <a class="" href="admin-revenue.html">
+                      <i class="fa-solid fa-chart-line">
+                      </i>Revenue</a>
+                      <a class="" href="admin-menu-categories.html">
+                        <i class="fa-solid fa-utensils">
+                        </i>Menu Categories</a>
+                        <a class="" href="admin-food-management.html">
+                          <i class="fa-solid fa-utensils">
+                          </i>Food Management</a>
+                          <a class="" href="admin-chef-management.html">
+                            <i class="fa-solid fa-user">
+                            </i>Chef Management</a>
+                            <a class="" href="admin-branch-management.html">
+                              <i class="fa-solid fa-diamond">
+                              </i>Branch Management</a>
+                              <a class="" href="admin-gallery.html">
+                                <i class="fa-solid fa-diamond">
+                                </i>Gallery</a>
+                                <a class="" href="admin-offers.html">
+                                  <i class="fa-solid fa-diamond">
+                                  </i>Offers</a>
+                                  <a class="" href="admin-blog.html">
+                                    <i class="fa-solid fa-diamond">
+                                    </i>Blog</a>
+                                    <a class="" href="admin-messages.html">
+                                      <i class="fa-solid fa-message">
+                                      </i>Messages</a>
+                                      <a class="" href="admin-notifications.html">
+                                        <i class="fa-solid fa-diamond">
+                                        </i>Notifications</a>
+                                        <a class="" href="admin-reports.html">
+                                          <i class="fa-solid fa-chart-line">
+                                          </i>Reports</a>
+                                          <a class="" href="admin-analytics.html">
+                                            <i class="fa-solid fa-chart-line">
+                                            </i>Analytics</a>
+                                            <a class="" href="admin-settings.html">
+                                              <i class="fa-solid fa-gear">
+                                              </i>Settings</a>
+                                            </nav>
+                                            <div class="dash-side-foot">
+                                              <a href="index.html">
+                                                <i class="fa-solid fa-arrow-left">
+                                                </i> Back to site</a>
+                                                <button data-logout>
+                                                  <i class="fa-solid fa-right-from-bracket">
+                                                  </i> Sign out</button>
+                                                </div>
+                                              </aside>
+                                              <div class="dashboard-main">
+                                                <div class="inline-actions">
+                                                  <div>
+                                                    <span class="eyebrow">Admin Portal</span>
+                                                    <h1>Dashboard</h1>
+                                                  </div>
+                                                  <div class="dash-actions">
+                                                    <div class="dash-user">
+                                                      <i class="fa-solid fa-circle-user">
+                                                      </i>
+                                                      <div>
+                                                        <strong data-user-name>Demo User</strong>
+                                                        <span data-user-email>guest@stackly.com</span>
+                                                      </div>
+                                                    </div>
+                                                    <a class="btn btn-primary" href="404.html">
+                                                      <i class="fa-solid fa-plus">
+                                                      </i> New Booking</a>
+                                                    </div>
+                                                  </div>
+                                                  <div id="dashPanel">
+                                                    <div class="widget-grid">
+                                                      <div class="widget">
+                                                        <span>Reservations</span>
+                                                        <strong>2</strong>
+                                                      </div>
+                                                      <div class="widget">
+                                                        <span>Orders</span>
+                                                        <strong>3</strong>
+                                                      </div>
+                                                      <div class="widget">
+                                                        <span>Revenue</span>
+                                                        <strong>$42.8k</strong>
+                                                      </div>
+                                                      <div class="widget">
+                                                        <span>Guests</span>
+                                                        <strong>744</strong>
+                                                      </div>
+                                                    </div>
+                                                    <div class="chart-grid">
+                                                      <div class="chart-card">
+                                                        <h3>Monthly Revenue</h3>
+                                                        <div class="bar-chart">
+                                                          <div class="bar" style="height:32%">
+                                                            <span>32</span>
+                                                          </div>
+                                                          <div class="bar" style="height:55%">
+                                                            <span>55</span>
+                                                          </div>
+                                                          <div class="bar" style="height:46%">
+                                                            <span>46</span>
+                                                          </div>
+                                                          <div class="bar" style="height:68%">
+                                                            <span>68</span>
+                                                          </div>
+                                                          <div class="bar" style="height:72%">
+                                                            <span>72</span>
+                                                          </div>
+                                                          <div class="bar" style="height:88%">
+                                                            <span>88</span>
+                                                          </div>
+                                                          <div class="bar" style="height:78%">
+                                                            <span>78</span>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="chart-card">
+                                                        <h3>Popular Dishes</h3>
+                                                        <div class="bar-chart">
+                                                          <div class="bar" style="height:86%">
+                                                            <span>86</span>
+                                                          </div>
+                                                          <div class="bar" style="height:64%">
+                                                            <span>64</span>
+                                                          </div>
+                                                          <div class="bar" style="height:42%">
+                                                            <span>42</span>
+                                                          </div>
+                                                          <div class="bar" style="height:38%">
+                                                            <span>38</span>
+                                                          </div>
+                                                          <div class="bar" style="height:92%">
+                                                            <span>92</span>
+                                                          </div>
+                                                          <div class="bar" style="height:34%">
+                                                            <span>34</span>
+                                                          </div>
+                                                          <div class="bar" style="height:24%">
+                                                            <span>24</span>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <section class="section mt-0">
+                                                      <div class="grid grid-2">
+                                                        <div>
+                                                          <div class="table-wrap">
+                                                            <table>
+                                                              <thead>
+                                                                <tr>
+                                                                  <th>ID</th>
+                                                                  <th>Guest</th>
+                                                                  <th>Date</th>
+                                                                  <th>Time</th>
+                                                                  <th>Status</th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>RSV-1082</td>
+                                                                  <td>Amelia Hart</td>
+                                                                  <td>2026-08-12</td>
+                                                                  <td>20:00</td>
+                                                                  <td>
+                                                                    <span class="status success">Confirmed</span>
+                                                                  </td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td>RSV-1083</td>
+                                                                  <td>Nikhil Shah</td>
+                                                                  <td>2026-08-14</td>
+                                                                  <td>19:30</td>
+                                                                  <td>
+                                                                    <span class="status warning">Pending</span>
+                                                                  </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                        </div>
+                                                        <div>
+                                                          <div class="table-wrap">
+                                                            <table>
+                                                              <thead>
+                                                                <tr>
+                                                                  <th>ID</th>
+                                                                  <th>Guest</th>
+                                                                  <th>Dish</th>
+                                                                  <th>Total</th>
+                                                                  <th>Status</th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td>ORD-7721</td>
+                                                                  <td>Maya Lin</td>
+                                                                  <td>Saffron Lobster Veloute</td>
+                                                                  <td>$86</td>
+                                                                  <td>
+                                                                    <span class="status warning">Pending</span>
+                                                                  </td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td>ORD-7722</td>
+                                                                  <td>Jon Bell</td>
+                                                                  <td>Truffle Morel Risotto</td>
+                                                                  <td>$64</td>
+                                                                  <td>
+                                                                    <span class="status success">Completed</span>
+                                                                  </td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td>ORD-7723</td>
+                                                                  <td>Ava Stone</td>
+                                                                  <td>Charcoal Paneer Royal</td>
+                                                                  <td>$42</td>
+                                                                  <td>
+                                                                    <span class="status info">Preparing</span>
+                                                                  </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </section>
+                                                  </div>
+                                                  <section class="section mt-0">
+                                                    <div class="inline-actions">
+                                                      <div>
+                                                        <span class="eyebrow">Branch Performance</span>
+                                                        <h2>Last seven days, all rooms.</h2>
+                                                      </div>
+                                                    </div>
+                                                    <div class="table-wrap">
+                                                      <table>
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Room</th>
+                                                            <th>Covers</th>
+                                                            <th>Revenue</th>
+                                                            <th>Avg Spend</th>
+                                                            <th>Occupancy</th>
+                                                            <th>Trend</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Astor Flagship, New York</td>
+                                                            <td>1,480</td>
+                                                            <td>$186,400</td>
+                                                            <td>$126</td>
+                                                            <td>94%</td>
+                                                            <td>
+                                                              <span class="status success">Up 6%</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Marylebone House, London</td>
+                                                            <td>1,120</td>
+                                                            <td>$138,900</td>
+                                                            <td>$124</td>
+                                                            <td>91%</td>
+                                                            <td>
+                                                              <span class="status success">Up 3%</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Marina Terrace, Dubai</td>
+                                                            <td>1,640</td>
+                                                            <td>$201,200</td>
+                                                            <td>$123</td>
+                                                            <td>88%</td>
+                                                            <td>
+                                                              <span class="status warning">Down 2%</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Colaba Pavilion, Mumbai</td>
+                                                            <td>1,390</td>
+                                                            <td>$96,300</td>
+                                                            <td>$69</td>
+                                                            <td>96%</td>
+                                                            <td>
+                                                              <span class="status success">Up 9%</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Aoyama Counter, Tokyo</td>
+                                                            <td>364</td>
+                                                            <td>$88,700</td>
+                                                            <td>$244</td>
+                                                            <td>99%</td>
+                                                            <td>
+                                                              <span class="status success">Full</span>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                  </section>
+                                                  <section class="section mt-0">
+                                                    <div class="inline-actions">
+                                                      <div>
+                                                        <span class="eyebrow">Needs Attention</span>
+                                                        <h2>Three things worth opening today.</h2>
+                                                      </div>
+                                                    </div>
+                                                    <div class="grid grid-3">
+                                                      <article class="card card-body">
+                                                        <span class="tag">Staffing</span>
+                                                        <h3>Dubai is two chefs short</h3>
+                                                        <p>Marina Terrace has run the last four services below brigade strength. Occupancy is holding but the covers trend has turned negative.</p>
+                                                      </article>
+                                                      <article class="card card-body">
+                                                        <span class="tag">Supply</span>
+                                                        <h3>Wren day boats cancelled</h3>
+                                                        <p>Weather has stopped two of four boats for the week. New York and London need the seafood course swapped before Thursday service.</p>
+                                                      </article>
+                                                      <article class="card card-body">
+                                                        <span class="tag">Reviews</span>
+                                                        <h3>Pacing flagged at Marina</h3>
+                                                        <p>Six survey responses this week mention waits between courses three and four. Same pattern that preceded the London fix in March.</p>
+                                                      </article>
+                                                    </div>
+                                                  </section>
+                                                  <section class="section mt-0">
+                                                    <div class="inline-actions">
+                                                      <div>
+                                                        <span class="eyebrow">Team Activity</span>
+                                                        <h2>Recent changes across the group.</h2>
+                                                      </div>
+                                                    </div>
+                                                    <div class="table-wrap">
+                                                      <table>
+                                                        <thead>
+                                                          <tr>
+                                                            <th>When</th>
+                                                            <th>Who</th>
+                                                            <th>Action</th>
+                                                            <th>Scope</th>
+                                                            <th>Status</th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Today, 09:14</td>
+                                                            <td>R. Moreau</td>
+                                                            <td>Menu revision published</td>
+                                                            <td>All rooms</td>
+                                                            <td>
+                                                              <span class="status success">Live</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Today, 08:02</td>
+                                                            <td>E. Sordi</td>
+                                                            <td>Reserve list repriced</td>
+                                                            <td>New York, London</td>
+                                                            <td>
+                                                              <span class="status success">Live</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Yesterday</td>
+                                                            <td>Events desk</td>
+                                                            <td>Buyout confirmed, 110 guests</td>
+                                                            <td>Astor Flagship</td>
+                                                            <td>
+                                                              <span class="status info">Scheduled</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Yesterday</td>
+                                                            <td>A. Rao</td>
+                                                            <td>Masterclass seats released</td>
+                                                            <td>New York</td>
+                                                            <td>
+                                                              <span class="status warning">4 left</span>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>2 days ago</td>
+                                                            <td>M. Bellini</td>
+                                                            <td>Lisbon build sign-off</td>
+                                                            <td>Pre-opening</td>
+                                                            <td>
+                                                              <span class="status info">In progress</span>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                  </section>
+                                                </div>
+                                              </div>
+                                            </main>
+                                            <script src="assets/js/storage.js">
+                                            </script>
+                                            <script src="assets/js/toast.js">
+                                            </script>
+                                            <script src="assets/js/modal.js">
+                                            </script>
+                                            <script src="assets/js/auth.js">
+                                            </script>
+                                            <script src="assets/js/menu.js">
+                                            </script>
+                                            <script src="assets/js/gallery.js">
+                                            </script>
+                                            <script src="assets/js/reservation.js">
+                                            </script>
+                                            <script src="assets/js/dashboard.js">
+                                            </script>
+                                            <script src="assets/js/charts.js">
+                                            </script>
+                                            <script src="assets/js/validation.js">
+                                            </script>
+                                            <script src="assets/js/darkmode.js">
+                                            </script>
+                                            <script src="assets/js/slider.js">
+                                            </script>
+                                            <script src="assets/js/animations.js"></script>
+                                            <script src="assets/js/main.js">
+                                            </script>
+                                          </body>
+                                        </html>

@@ -1,0 +1,459 @@
+/* ==========================================================================
+   Motion layer
+   --------------------------------------------------------------------------
+   Everything that moves on the site, in one place:
+
+     1. Tunables       - one set of durations and easings so timings stay in sync
+     2. Keyframes      - entrances, ambience, and hover accents
+     3. Scroll reveals - [data-anim] variants, driven by assets/js/animations.js
+     4. Hover effects  - hung off the class names the pages already use, so no
+                         page markup has to change to get them
+     5. Swiper         - self-contained layout and gold controls, so a carousel
+                         still renders correctly without Swiper's own stylesheet
+     6. Falling flecks - the drifting gold ambience layer
+     7. Reduced motion - one switch that stops all of the above
+
+   Imported after base.css (see style.css) so these hover states win over the
+   plainer defaults, and before responsive.css, which must stay last.
+   ========================================================================== */
+
+:root {
+  /* Overshoot-free "ease out expo"-ish curve used by every entrance. */
+  --m-ease: cubic-bezier(.22, 1, .36, 1);
+  --m-ease-soft: cubic-bezier(.4, 0, .2, 1);
+  --m-dur: .85s;                 /* entrance length; JS never overrides this */
+  --m-delay: 0s;                 /* per-element stagger, set inline by JS */
+  --m-hover: .38s;
+  --m-gold: rgba(193, 148, 64, .55);
+  --m-glow: 0 22px 55px rgba(0, 0, 0, .5), 0 0 0 1px rgba(193, 148, 64, .38);
+  --m-gold-glow: 0 16px 38px rgba(193, 148, 64, .34);
+}
+
+/* ==========================================================================
+   2. Keyframes
+   ========================================================================== */
+
+/* --- Entrances ----------------------------------------------------------- */
+@keyframes mFadeUp    { from { opacity: 0; transform: translate3d(0, 42px, 0); }  to { opacity: 1; transform: none; } }
+@keyframes mFadeDown  { from { opacity: 0; transform: translate3d(0, -34px, 0); } to { opacity: 1; transform: none; } }
+/* "Swipe" pair: content slides in along the axis the eye reads. */
+@keyframes mSwipeRight { from { opacity: 0; transform: translate3d(-70px, 0, 0); } to { opacity: 1; transform: none; } }
+@keyframes mSwipeLeft  { from { opacity: 0; transform: translate3d(70px, 0, 0); }  to { opacity: 1; transform: none; } }
+@keyframes mZoomIn    { from { opacity: 0; transform: scale(.88); } to { opacity: 1; transform: none; } }
+@keyframes mFlipUp {
+  from { opacity: 0; transform: perspective(1000px) rotateX(-24deg) translate3d(0, 34px, 0); }
+  to   { opacity: 1; transform: perspective(1000px) rotateX(0) translate3d(0, 0, 0); }
+}
+@keyframes mBlurIn {
+  from { opacity: 0; filter: blur(14px); transform: scale(1.03); }
+  to   { opacity: 1; filter: blur(0); transform: none; }
+}
+/* Falling entrance: drops in from above, settles with one soft bounce. */
+@keyframes mFall {
+  0%   { opacity: 0; transform: translate3d(0, -80px, 0) rotate(-2.5deg); }
+  55%  { opacity: 1; transform: translate3d(0, 12px, 0) rotate(1deg); }
+  78%  { transform: translate3d(0, -6px, 0) rotate(-.4deg); }
+  100% { opacity: 1; transform: none; }
+}
+/* Same idea with a spin, used for icon tiles and gallery bricks. */
+@keyframes mFallSpin {
+  0%   { opacity: 0; transform: translate3d(0, -90px, 0) rotate(-9deg) scale(.9); }
+  60%  { opacity: 1; transform: translate3d(0, 10px, 0) rotate(2deg) scale(1.01); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* --- Ambience and accents ------------------------------------------------ */
+@keyframes mDrift  { from { transform: translate3d(0, -12vh, 0); } to { transform: translate3d(0, 114vh, 0); } }
+@keyframes mSway   { from { transform: translateX(-18px) rotate(-30deg); } to { transform: translateX(18px) rotate(30deg); } }
+@keyframes mTwinkle{ 0%, 100% { opacity: var(--m-op, .7); } 50% { opacity: calc(var(--m-op, .7) * .35); } }
+@keyframes mFloat  { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes mHeartPop { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 70% { transform: scale(.92); } 100% { transform: scale(1); } }
+@keyframes mGoldPan  { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }
+@keyframes mRipple   { to { transform: scale(2.6); opacity: 0; } }
+@keyframes mUnderline{ from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ==========================================================================
+   3. Scroll reveals
+   --------------------------------------------------------------------------
+   assets/js/animations.js tags elements with data-anim="<variant>" and adds
+   .m-in once they cross into view. Elements start hidden, so the JS is what
+   makes them appear - the reduced-motion block below and the no-JS fallback
+   at the end of this section both hand visibility back if that never happens.
+   ========================================================================== */
+
+[data-anim] { opacity: 0; }
+[data-anim].m-in {
+  animation-name: mFadeUp;                     /* default variant */
+  animation-duration: var(--m-dur);
+  animation-timing-function: var(--m-ease);
+  animation-delay: var(--m-delay);
+  animation-fill-mode: both;
+  will-change: opacity, transform;
+}
+[data-anim="fade-down"].m-in  { animation-name: mFadeDown; }
+[data-anim="swipe-left"].m-in { animation-name: mSwipeLeft; }
+[data-anim="swipe-right"].m-in{ animation-name: mSwipeRight; }
+[data-anim="zoom-in"].m-in    { animation-name: mZoomIn; }
+[data-anim="flip-up"].m-in    { animation-name: mFlipUp; }
+[data-anim="blur-in"].m-in    { animation-name: mBlurIn; }
+[data-anim="fall"].m-in       { animation-name: mFall; animation-duration: 1s; }
+[data-anim="fall-spin"].m-in  { animation-name: mFallSpin; animation-duration: 1.05s; }
+
+/* Once the entrance has played, drop the compositor hint and the animation so
+   nothing keeps a promoted layer alive for the rest of the session. */
+[data-anim].m-done {
+  animation: none;
+  opacity: 1;
+  filter: none;
+  transform: none;
+  will-change: auto;
+}
+
+/* ==========================================================================
+   4. Hover effects
+   ========================================================================== */
+
+/* --- Cards --------------------------------------------------------------- */
+.card {
+  position: relative;
+  transition: transform .45s var(--m-ease), box-shadow .45s ease,
+              border-color .35s ease, filter .35s ease;
+}
+/* Cursor-tracked gold spotlight. Coordinates come from animations.js. */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .35s ease;
+  background: radial-gradient(340px circle at var(--m-mx, 50%) var(--m-my, 50%),
+              rgba(193, 148, 64, .16), transparent 62%);
+}
+/* Diagonal light sweep, fired once per hover. */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -40% -10%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-125%) rotate(8deg);
+  background: linear-gradient(100deg, transparent 38%, rgba(255, 255, 255, .14) 50%, transparent 62%);
+  transition: transform .9s var(--m-ease-soft), opacity .3s ease;
+}
+.card:hover { transform: translateY(-10px); box-shadow: var(--m-glow); border-color: var(--m-gold); }
+.card:hover::before { opacity: 1; }
+.card:hover::after  { opacity: 1; transform: translateX(125%) rotate(8deg); }
+/* The card body must sit above both overlays. */
+.card > * { position: relative; z-index: 3; }
+
+/* 3D tilt, applied by animations.js on fine pointers only. Declared after
+   .card:hover so it wins at equal specificity while the pointer is inside. */
+.card.m-tilt {
+  transform: perspective(1000px)
+             rotateX(var(--m-rx, 0deg)) rotateY(var(--m-ry, 0deg))
+             translateY(-10px) scale(1.015);
+  transition: transform .18s var(--m-ease-soft), box-shadow .45s ease, border-color .35s ease;
+}
+
+.image-card img { transition: transform .7s var(--m-ease), filter .5s ease; }
+.image-card:hover img { transform: scale(1.09) rotate(.7deg); filter: saturate(1.1) brightness(1.04); }
+.menu-card:hover .price { animation: mFloat 1.4s ease-in-out infinite; }
+.offer-card:hover { background-size: 200% 200%; animation: mGoldPan 3.5s linear infinite; }
+.chef-card img { transition: transform .8s var(--m-ease), filter .5s ease; }
+.chef-card:hover img { transform: scale(1.07); filter: contrast(1.06); }
+
+.tag { transition: transform var(--m-hover) var(--m-ease), background var(--m-hover) ease, color var(--m-hover) ease; }
+.card:hover .tag { transform: translateY(-2px); background: rgba(193, 148, 64, .28); }
+
+.favorite { transition: transform .25s var(--m-ease), color .25s ease; }
+.favorite:hover { transform: scale(1.2); color: var(--gold-hover); }
+.favorite:active i { animation: mHeartPop .55s var(--m-ease); }
+
+/* --- Buttons and chips --------------------------------------------------- */
+.btn {
+  position: relative;
+  overflow: hidden;
+  /* --m-tx/--m-ty carry the magnetic pull that animations.js applies. */
+  transform: translate3d(var(--m-tx, 0px), var(--m-ty, 0px), 0);
+  transition: transform .3s var(--m-ease), box-shadow .3s ease,
+              background .3s ease, color .3s ease, border-color .3s ease;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translateX(-135%) skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .38), transparent);
+  transition: transform .75s var(--m-ease-soft);
+}
+.btn:hover::after { transform: translateX(135%) skewX(-18deg); }
+.btn:hover { transform: translate3d(var(--m-tx, 0px), calc(var(--m-ty, 0px) - 3px), 0) scale(1.03); }
+.btn:active { transform: translate3d(0, -1px, 0) scale(.97); }
+.btn-primary:hover { box-shadow: var(--m-gold-glow); }
+.btn-ghost:hover { background: rgba(193, 148, 64, .16); border-color: var(--m-gold); color: var(--gold-hover); }
+.btn-text:hover { color: var(--gold-hover); }
+.btn i { transition: transform .3s var(--m-ease); }
+.btn:hover i { transform: scale(1.14); }
+
+/* Click ripple, injected by animations.js. */
+.m-ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .38);
+  transform: scale(0);
+  opacity: .6;
+  animation: mRipple .62s var(--m-ease-soft) forwards;
+}
+.btn-primary .m-ripple { background: rgba(0, 0, 0, .22); }
+
+.chip { transition: transform .25s var(--m-ease), background .25s ease, color .25s ease, box-shadow .25s ease; }
+.chip:hover { transform: translateY(-3px); box-shadow: var(--m-gold-glow); }
+.chip.active { box-shadow: 0 8px 22px rgba(193, 148, 64, .3); }
+
+.icon-btn, .social-btn, .back-top { transition: transform .3s var(--m-ease), background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.icon-btn:hover { transform: rotate(8deg) scale(1.1); border-color: var(--m-gold); color: var(--gold); }
+.back-top:hover { transform: translateY(-4px) scale(1.08); box-shadow: var(--m-gold-glow); }
+.social-btn:hover { box-shadow: var(--m-gold-glow); }
+.socials .social:hover { transform: translateY(-4px) rotate(-6deg); box-shadow: var(--m-gold-glow); }
+
+/* --- Header and footer links --------------------------------------------- */
+.nav-links a { position: relative; transition: color .3s ease; }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold-gradient);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .35s var(--m-ease);
+}
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.brand img { transition: transform .45s var(--m-ease), filter .45s ease; }
+.brand:hover img { transform: scale(1.06); filter: drop-shadow(0 6px 16px rgba(193, 148, 64, .4)); }
+.mega-panel a { transition: background .25s ease, transform .25s var(--m-ease), color .25s ease; }
+.mega-panel a:hover { background: rgba(193, 148, 64, .16); transform: translateX(5px); color: var(--gold); }
+.profile-dropdown a, .profile-dropdown button { transition: background .25s ease, padding-left .25s ease, color .25s ease; }
+.profile-dropdown a:hover, .profile-dropdown button:hover { padding-left: 15px; }
+.footer-legal a { position: relative; transition: color .25s ease; }
+.footer-legal a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s var(--m-ease);
+}
+.footer-legal a:hover::after { transform: scaleX(1); }
+
+/* --- Media, stats, tables, forms ----------------------------------------- */
+.media-stack img { transition: transform .6s var(--m-ease), box-shadow .5s ease, filter .5s ease; }
+.media-stack img:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 34px 70px rgba(0, 0, 0, .55); filter: saturate(1.08); z-index: 2; position: relative; }
+
+.gallery-item { transition: transform .5s var(--m-ease), box-shadow .5s ease, border-color .4s ease; }
+.gallery-item:hover { transform: translateY(-7px) scale(1.015); border-color: var(--m-gold); box-shadow: var(--m-glow); }
+.gallery-item img { transition: transform .7s var(--m-ease), filter .5s ease; }
+.gallery-item:hover img { transform: scale(1.1); filter: brightness(1.07) saturate(1.1); }
+
+.stat { transition: transform .4s var(--m-ease), border-color .35s ease, box-shadow .4s ease, background .35s ease; }
+.stat:hover { transform: translateY(-7px); border-color: var(--m-gold); box-shadow: var(--m-glow); }
+.stat strong { display: block; transition: transform .4s var(--m-ease); transform-origin: left center; }
+.stat:hover strong { transform: scale(1.09); }
+
+.surface-pad { transition: border-color .35s ease, box-shadow .4s ease, transform .4s var(--m-ease); }
+.surface-pad:hover { border-color: rgba(193, 148, 64, .3); box-shadow: 0 18px 44px rgba(0, 0, 0, .28); }
+
+tbody tr { transition: background .25s ease, transform .25s var(--m-ease); }
+tbody tr:hover { background: rgba(193, 148, 64, .08); }
+
+input, select, textarea { transition: border-color .3s ease, box-shadow .3s ease, background .3s ease; }
+input:focus, select:focus, textarea:focus { background: rgba(255, 255, 255, .09); box-shadow: 0 0 0 3px rgba(193, 148, 64, .2), 0 8px 24px rgba(193, 148, 64, .12); }
+
+/* --- Opt-in helpers ------------------------------------------------------ */
+.hv-lift  { transition: transform .4s var(--m-ease), box-shadow .4s ease; }
+.hv-lift:hover  { transform: translateY(-8px); box-shadow: var(--m-glow); }
+.hv-zoom  { overflow: hidden; }
+.hv-zoom img { transition: transform .7s var(--m-ease); }
+.hv-zoom:hover img { transform: scale(1.09); }
+.hv-glow  { transition: box-shadow .4s ease, border-color .4s ease; }
+.hv-glow:hover  { box-shadow: var(--m-gold-glow); border-color: var(--m-gold); }
+.hv-float:hover { animation: mFloat 2s ease-in-out infinite; }
+
+/* ==========================================================================
+   5. Swiper
+   --------------------------------------------------------------------------
+   The Swiper stylesheet is deliberately not loaded from the CDN - these rules
+   cover the slide-mode layout Swiper needs plus the gold controls, so a
+   carousel can never render as an unstyled stack of cards.
+   ========================================================================== */
+
+.m-swiper-shell { position: relative; }
+.m-swiper-shell .swiper {
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
+  /* Padding gives the hover lift room to breathe inside the clipped box; the
+     negative margins keep the carousel aligned with the grids around it. */
+  padding: 14px 12px;
+  margin: -14px -12px;
+}
+.swiper-wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: transform;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  /* Depth cue: slides scrolled to the edge sit back until they are fully in. */
+  opacity: .5;
+  filter: saturate(.7);
+  transform: scale(.94);
+  transition: opacity .5s ease, filter .5s ease, transform .5s var(--m-ease);
+}
+.swiper-slide > * { width: 100%; }
+.swiper-slide-visible { opacity: 1; filter: none; transform: scale(1); }
+/* The card inside already lifts on hover; the slide only needs to come forward
+   so its neighbours cannot overlap the raised edge. */
+.swiper-slide-visible:hover { z-index: 2; }
+.swiper-slide-active .card { border-color: rgba(193, 148, 64, .3); }
+.swiper-horizontal { touch-action: pan-y; }
+.swiper-grab-cursor { cursor: grab; }
+.swiper-grab-cursor:active { cursor: grabbing; }
+
+/* Controls row: arrows either side of the bullets, under the slides, where
+   they can never sit on top of a dish title. */
+.swiper-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 26px;
+}
+
+/* Arrows */
+.swiper-nav {
+  position: relative;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(15, 27, 29, .78);
+  backdrop-filter: blur(10px);
+  color: var(--heading);
+  cursor: pointer;
+  transition: transform .3s var(--m-ease), background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, opacity .3s ease;
+}
+.swiper-nav:hover { background: var(--gold); color: #111; border-color: var(--gold); box-shadow: var(--m-gold-glow); transform: scale(1.12); }
+.swiper-nav.prev:hover { transform: scale(1.12) translateX(-3px); }
+.swiper-nav.next:hover { transform: scale(1.12) translateX(3px); }
+.swiper-button-disabled { opacity: .35; cursor: default; }
+
+/* Bullets */
+.m-swiper-shell .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  min-width: 96px;
+}
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  border-radius: 99px;
+  border: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, .22);
+  cursor: pointer;
+  transition: width .35s var(--m-ease), background .35s ease, transform .35s var(--m-ease);
+}
+.swiper-pagination-bullet:hover { background: rgba(193, 148, 64, .6); transform: scale(1.2); }
+.swiper-pagination-bullet-active { width: 32px; background: var(--gold-gradient); }
+
+@media (max-width: 700px) {
+  .swiper-controls { gap: 14px; margin-top: 20px; }
+  .swiper-nav { width: 42px; height: 42px; }
+}
+
+/* ==========================================================================
+   6. Falling gold flecks
+   --------------------------------------------------------------------------
+   A fixed, click-through layer of drifting embers. Sits above section
+   backgrounds but below the sticky header (z-index 50), toasts, and modals.
+   The outer span falls, the inner one sways and twinkles, so the two motions
+   never fight over a single transform.
+   ========================================================================== */
+
+.m-fall-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+.m-flake {
+  position: absolute;
+  top: 0;
+  left: var(--m-x, 50%);
+  will-change: transform;
+  animation: mDrift var(--m-dur-fall, 16s) linear var(--m-delay-fall, 0s) infinite;
+}
+.m-flake i {
+  display: block;
+  width: var(--m-size, 6px);
+  height: var(--m-size, 6px);
+  border-radius: 50%;
+  opacity: var(--m-op, .7);
+  background: radial-gradient(circle at 32% 30%, #F3D89A, rgba(193, 148, 64, .18));
+  box-shadow: 0 0 12px rgba(193, 148, 64, .5);
+  animation: mSway var(--m-sway, 4s) ease-in-out infinite alternate,
+             mTwinkle 3.2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   7. Reduced motion
+   --------------------------------------------------------------------------
+   Entrances resolve instantly, ambience is removed, and hover states fall back
+   to colour changes only. animations.js makes the same checks on its side.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] { opacity: 1 !important; animation: none !important; filter: none !important; transform: none !important; }
+  .m-fall-layer { display: none; }
+  .m-ripple { display: none; }
+  .card:hover, .card.m-tilt, .btn:hover, .chip:hover, .stat:hover,
+  .gallery-item:hover, .media-stack img:hover,
+  .icon-btn:hover, .back-top:hover, .socials .social:hover, .swiper-nav:hover {
+    transform: none;
+  }
+  .card::after, .btn::after { display: none; }
+  .image-card:hover img, .chef-card:hover img, .gallery-item:hover img { transform: none; }
+  .menu-card:hover .price, .offer-card:hover, .hv-float:hover { animation: none; }
+  .swiper-slide { opacity: 1; filter: none; transform: none; }
+}

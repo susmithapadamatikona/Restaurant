@@ -1,0 +1,39 @@
+:root {
+  --bg: #0F1B1D;
+  --section: #242F2E;
+  --card: #414C4A;
+  --surface: #2E3837;
+  --gold: #C19440;
+  --gold-hover: #D8A94A;
+  --bronze: #915929;
+  --brown: #602E17;
+  --heading: #FFFFFF;
+  --text: #E6E6E6;
+  --light: #CFCFCF;
+  --muted: #7B807D;
+  --border: rgba(255,255,255,0.08);
+  --glass: rgba(255,255,255,0.08);
+  --success: #4CAF50;
+  --warning: #F4B400;
+  --error: #E53935;
+  --info: #2196F3;
+  --hero-gradient: linear-gradient(135deg, #0F1B1D, #1B2424, #242F2E);
+  --gold-gradient: linear-gradient(90deg, #915929, #C19440, #E2B75B);
+  --shadow: 0 24px 70px rgba(0,0,0,0.35);
+  --radius: 8px;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Outfit", "Poppins", Arial, sans-serif;
+}
+
+body.light-mode {
+  --bg: #F6F2EA;
+  --section: #FFFFFF;
+  --card: #EFE7DA;
+  --surface: #FBF7F0;
+  --heading: #18211F;
+  --text: #25302D;
+  --light: #4D5754;
+  --muted: #707874;
+  --border: rgba(15,27,29,0.12);
+  --glass: rgba(255,255,255,0.68);
+}

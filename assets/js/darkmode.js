@@ -1,0 +1,1 @@
+/* Theme switching lives in main.js because it touches the global chrome. */

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Special Dishes | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="special-dishes">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav-auth-mobile">
+            <a class="btn btn-ghost" href="login.html">
+              <i class="fa-solid fa-right-to-bracket">
+              </i> Login</a>
+              <a class="btn btn-primary" href="register.html">
+                <i class="fa-solid fa-user-plus">
+                </i> Register</a>
+              </div>
+            </nav>
+            <div class="nav-actions">
+              <a class="btn btn-ghost nav-auth" href="login.html">
+                <i class="fa-solid fa-right-to-bracket">
+                </i> Login</a>
+                <a class="btn btn-primary nav-auth" href="register.html">
+                  <i class="fa-solid fa-user-plus">
+                  </i> Register</a>
+                  <button class="icon-btn hamburger" title="Menu">
+                    <i class="fa-solid fa-bars">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main id="app">
+              <section class="page-hero">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?fm=webp&fit=crop&w=1280&q=32" alt="Special Dishes">
+                <div class="container">
+                  <span class="eyebrow">Stackly</span>
+                  <h1>Special Dishes</h1>
+                  <p class="lead">Limited plates designed around rare harvests and chef technique.</p>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container section-head">
+                  <div>
+                    <span class="eyebrow">This Season</span>
+                    <h2>Limited plates, built around rare harvests.</h2>
+                  </div>
+                  <a class="btn btn-ghost" href="menu.html">Full Menu</a>
+                </div>
+                <div class="container grid grid-3">
+                  <article class="card image-card menu-card" data-dish="1">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?fm=webp&fit=crop&w=760&q=38" alt="Saffron Lobster Veloute">
+                    <div class="card-body">
+                      <div class="menu-title-row">
+                        <div>
+                          <span class="tag">Non-Veg</span>
+                          <h3>Saffron Lobster Veloute</h3>
+                        </div>
+                        <button class="favorite" data-fav="1" title="Favorite">
+                          <i class="fa-solid fa-heart">
+                          </i>
+                        </button>
+                      </div>
+                      <p>Butter-poached lobster, saffron cream, fennel pollen, and smoked caviar.</p>
+                      <div class="dish-meta">
+                        <span>
+                          <i class="fa-regular fa-clock">
+                          </i> 28 min</span>
+                          <span>
+                            <i class="fa-solid fa-star">
+                            </i> Chef pick</span>
+                          </div>
+                          <div class="inline-actions">
+                            <span class="price">$86</span>
+                            <a class="btn btn-ghost" href="404.html">Details</a>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="card image-card menu-card" data-dish="2">
+                        <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?fm=webp&fit=crop&w=760&q=80" alt="Truffle Morel Risotto">
+                        <div class="card-body">
+                          <div class="menu-title-row">
+                            <div>
+                              <span class="tag">Italian</span>
+                              <h3>Truffle Morel Risotto</h3>
+                            </div>
+                            <button class="favorite" data-fav="2" title="Favorite">
+                              <i class="fa-regular fa-heart">
+                              </i>
+                            </button>
+                          </div>
+                          <p>Carnaroli rice folded with black truffle, morels, parmesan, and aged balsamic.</p>
+                          <div class="dish-meta">
+                            <span>
+                              <i class="fa-regular fa-clock">
+                              </i> 24 min</span>
+                              <span>
+                                <i class="fa-solid fa-star">
+                                </i> Chef pick</span>
+                              </div>
+                              <div class="inline-actions">
+                                <span class="price">$64</span>
+                                <a class="btn btn-ghost" href="404.html">Details</a>
+                              </div>
+                            </div>
+                          </article>
+                          <article class="card image-card menu-card" data-dish="3">
+                            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?fm=webp&fit=crop&w=760&q=50" alt="Charcoal Paneer Royal">
+                            <div class="card-body">
+                              <div class="menu-title-row">
+                                <div>
+                                  <span class="tag">Indian</span>
+                                  <h3>Charcoal Paneer Royal</h3>
+                                </div>
+                                <button class="favorite" data-fav="3" title="Favorite">
+                                  <i class="fa-regular fa-heart">
+                                  </i>
+                                </button>
+                              </div>
+                              <p>Tandoor paneer, cashew silk curry, fenugreek, and edible gold dust.</p>
+                              <div class="dish-meta">
+                                <span>
+                                  <i class="fa-regular fa-clock">
+                                  </i> 22 min</span>
+                                  <span>
+                                    <i class="fa-solid fa-star">
+                                    </i> Chef pick</span>
+                                  </div>
+                                  <div class="inline-actions">
+                                    <span class="price">$42</span>
+                                    <a class="btn btn-ghost" href="404.html">Details</a>
+                                  </div>
+                                </div>
+                              </article>
+                              <article class="card image-card menu-card" data-dish="4">
+                                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?fm=webp&fit=crop&w=760&q=80" alt="Jade Dumpling Consomme">
+                                <div class="card-body">
+                                  <div class="menu-title-row">
+                                    <div>
+                                      <span class="tag">Chinese</span>
+                                      <h3>Jade Dumpling Consomme</h3>
+                                    </div>
+                                    <button class="favorite" data-fav="4" title="Favorite">
+                                      <i class="fa-regular fa-heart">
+                                      </i>
+                                    </button>
+                                  </div>
+                                  <p>Crystal dumplings in clarified mushroom tea with ginger and chive oil.</p>
+                                  <div class="dish-meta">
+                                    <span>
+                                      <i class="fa-regular fa-clock">
+                                      </i> 18 min</span>
+                                      <span>
+                                        <i class="fa-solid fa-star">
+                                        </i> Chef pick</span>
+                                      </div>
+                                      <div class="inline-actions">
+                                        <span class="price">$38</span>
+                                        <a class="btn btn-ghost" href="404.html">Details</a>
+                                      </div>
+                                    </div>
+                                  </article>
+                                  <article class="card image-card menu-card" data-dish="5">
+                                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?fm=webp&fit=crop&w=760&q=80" alt="Mole Wagyu Short Rib">
+                                    <div class="card-body">
+                                      <div class="menu-title-row">
+                                        <div>
+                                          <span class="tag">Mexican</span>
+                                          <h3>Mole Wagyu Short Rib</h3>
+                                        </div>
+                                        <button class="favorite" data-fav="5" title="Favorite">
+                                          <i class="fa-solid fa-heart">
+                                          </i>
+                                        </button>
+                                      </div>
+                                      <p>Slow glazed wagyu, cacao mole, blue corn, and pickled heirloom onion.</p>
+                                      <div class="dish-meta">
+                                        <span>
+                                          <i class="fa-regular fa-clock">
+                                          </i> 36 min</span>
+                                          <span>
+                                            <i class="fa-solid fa-star">
+                                            </i> Chef pick</span>
+                                          </div>
+                                          <div class="inline-actions">
+                                            <span class="price">$92</span>
+                                            <a class="btn btn-ghost" href="404.html">Details</a>
+                                          </div>
+                                        </div>
+                                      </article>
+                                      <article class="card image-card menu-card" data-dish="6">
+                                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?fm=webp&fit=crop&w=760&q=56" alt="Garden Jewel Tartare">
+                                        <div class="card-body">
+                                          <div class="menu-title-row">
+                                            <div>
+                                              <span class="tag">Veg</span>
+                                              <h3>Garden Jewel Tartare</h3>
+                                            </div>
+                                            <button class="favorite" data-fav="6" title="Favorite">
+                                              <i class="fa-regular fa-heart">
+                                              </i>
+                                            </button>
+                                          </div>
+                                          <p>Compressed beetroot, avocado cream, citrus pearls, and toasted seeds.</p>
+                                          <div class="dish-meta">
+                                            <span>
+                                              <i class="fa-regular fa-clock">
+                                              </i> 16 min</span>
+                                              <span>
+                                                <i class="fa-solid fa-star">
+                                                </i> Chef pick</span>
+                                              </div>
+                                              <div class="inline-actions">
+                                                <span class="price">$34</span>
+                                                <a class="btn btn-ghost" href="404.html">Details</a>
+                                              </div>
+                                            </div>
+                                          </article>
+                                        </div>
+                                      </section>
+                                      <section class="section alt">
+                                        <div class="container section-head">
+                                          <div>
+                                            <span class="eyebrow">How Limited Plates Work</span>
+                                            <h2>Short runs, honest reasons.</h2>
+                                          </div>
+                                        </div>
+                                        <div class="container grid grid-3">
+                                          <article class="card card-body">
+                                            <span class="tag">01</span>
+                                            <h3>Tied to a single delivery</h3>
+                                            <p>Most specials exist because one grower had a good week. When that crate is gone the dish leaves the menu, usually within four or five services.</p>
+                                          </article>
+                                          <article class="card card-body">
+                                            <span class="tag">02</span>
+                                            <h3>Tested at the counter first</h3>
+                                            <p>Every special runs at the chef counter for two nights before it reaches the dining room, so the pacing and portion are already settled.</p>
+                                          </article>
+                                          <article class="card card-body">
+                                            <span class="tag">03</span>
+                                            <h3>Never repeated identically</h3>
+                                            <p>A dish that returns next season returns changed. The produce is different, so pretending otherwise would be dishonest.</p>
+                                          </article>
+                                        </div>
+                                      </section>
+                                      <section class="section">
+                                        <div class="container split">
+                                          <div>
+                                            <span class="eyebrow">Allergens & Substitutions</span>
+                                            <h2>Tell us early and we will rebuild, not remove.</h2>
+                                            <p class="lead">Specials are the hardest dishes to adapt on the night because the produce is finite. With 48 hours of notice the kitchen can plan a parallel plate instead of striking a course from your menu.</p>
+                                            <div class="surface-pad">
+                                              <p>
+                                                <strong>Full menus available:</strong> vegetarian, vegan, gluten-free, nut-free, pescatarian.</p>
+                                                <p>
+                                                  <strong>Notice required:</strong> 48 hours for the carte, 72 hours for the tasting menu.</p>
+                                                  <p>
+                                                    <strong>Contact:</strong> concierge@stackly.example or +1 212 555 0198.</p>
+                                                  </div>
+                                                </div>
+                                                <div class="media-stack">
+                                                  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?fm=webp&fit=crop&w=760&q=44" alt="Seasonal produce">
+                                                  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?fm=webp&fit=crop&w=600&q=32" alt="Plated special">
+                                                </div>
+                                              </div>
+                                            </section>
+                                            <section class="section alt">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">The Producers</span>
+                                                  <h2>Three growers behind this season's plates.</h2>
+                                                </div>
+                                              </div>
+                                              <div class="container grid grid-3">
+                                                <article class="card card-body">
+                                                  <span class="tag">Kent, UK</span>
+                                                  <h3>Halbrook Farm</h3>
+                                                  <p>Heritage beetroot, forced rhubarb, and the sorrel that finishes the garden tartare. Family-run since 1958 and still delivering in the same van.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">Cornwall, UK</span>
+                                                  <h3>The Wren day boats</h3>
+                                                  <p>Four boats, landed and driven the same morning. If the sea is bad we serve something else rather than buying from a market.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">Kerala, India</span>
+                                                  <h3>Malabar pepper co-op</h3>
+                                                  <p>Pepper, cardamom, and vanilla bought direct from a fourteen-family co-operative. Anika visits the harvest every second year.</p>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Seasonal Calendar</span>
+                                                  <h2>Roughly when each plate appears.</h2>
+                                                </div>
+                                              </div>
+                                              <div class="container">
+                                                <div class="table-wrap">
+                                                  <table>
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Window</th>
+                                                        <th>Produce Peak</th>
+                                                        <th>Likely Plates</th>
+                                                        <th>Typical Run</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>Jan - Mar</td>
+                                                        <td>Forced rhubarb, citrus, brassicas</td>
+                                                        <td>Garden Jewel Tartare, Rose Gold Panna Cotta</td>
+                                                        <td>5 - 7 weeks</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Apr - Jun</td>
+                                                        <td>Asparagus, morels, early herbs</td>
+                                                        <td>Truffle Morel Risotto, Burrata Amalfi</td>
+                                                        <td>3 - 4 weeks</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Jul - Sep</td>
+                                                        <td>Shellfish, stone fruit, tomatoes</td>
+                                                        <td>Saffron Lobster Veloute, Smoked Fig Elixir</td>
+                                                        <td>4 - 6 weeks</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Oct - Dec</td>
+                                                        <td>Game, roots, ferments from September</td>
+                                                        <td>Mole Wagyu Short Rib, Charcoal Paneer Royal</td>
+                                                        <td>6 - 8 weeks</td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                            </section>
+                                            <section class="section alt">
+                                              <div class="container section-head">
+                                                <div>
+                                                  <span class="eyebrow">Pairings</span>
+                                                  <h2>What the cellar pours alongside.</h2>
+                                                </div>
+                                              </div>
+                                              <div class="container grid grid-3">
+                                                <article class="card card-body">
+                                                  <span class="tag">Wine</span>
+                                                  <h3>Six glasses, matched by weight</h3>
+                                                  <p>Elena builds the flight against the whole progression rather than dish by dish, so nothing peaks too early. From $95 per guest.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">Zero-proof</span>
+                                                  <h3>House ferments and cordials</h3>
+                                                  <p>Built from the same pantry as the food: kombucha, verjus, smoked teas, and clarified juices. From $65 per guest.</p>
+                                                </article>
+                                                <article class="card card-body">
+                                                  <span class="tag">By the glass</span>
+                                                  <h3>A short, opinionated list</h3>
+                                                  <p>Fourteen wines open at any time. Ask the floor team what is drinking well tonight rather than reading the list top to bottom.</p>
+                                                </article>
+                                              </div>
+                                            </section>
+                                            <section class="section">
+                                              <div class="container split">
+                                                <div>
+                                                  <span class="eyebrow">Next Step</span>
+                                                  <h2>Specials move fast. Book before the crate runs out.</h2>
+                                                  <p class="lead">Reservations open twenty-eight days ahead, and the concierge desk will tell you what is actually on the pass this week.</p>
+                                                  <div class="hero-actions">
+                                                    <a class="btn btn-primary" href="404.html">
+                                                      <i class="fa-solid fa-calendar-check">
+                                                      </i> Reserve a Table</a>
+                                                      <a class="btn btn-ghost" href="404.html">
+                                                        <i class="fa-solid fa-comments">
+                                                        </i> Ask the Concierge</a>
+                                                      </div>
+                                                    </div>
+                                                    <div class="media-stack">
+                                                      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Stackly dining room">
+                                                      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?fm=webp&fit=crop&w=760&q=80" alt="Plated course">
+                                                    </div>
+                                                  </div>
+                                                </section>
+                                              </main>
+                                              <footer class="site-footer">
+                                                <div class="container footer-cta">
+                                                  <div>
+                                                    <span class="eyebrow">The Guest List</span>
+                                                    <h3>Kitchen notes, and residency seats before they go public.</h3>
+                                                  </div>
+                                                  <form class="newsletter" data-newsletter>
+                                                    <input name="email" type="email" placeholder="Your email address" required>
+                                                    <button class="btn btn-primary">
+                                                      <i class="fa-solid fa-paper-plane">
+                                                      </i> Subscribe</button>
+                                                    </form>
+                                                  </div>
+                                                  <div class="container footer-grid">
+                                                    <div class="footer-brand">
+                                                      <a class="brand" href="404.html">
+                                                        <img src="assets/images/stackly-logo.webp" alt="Stackly">
+                                                      </a>
+                                                      <p>Luxury fine dining, cinematic tasting menus, private salons, and chef-led hospitality across seven city rooms.</p>
+                                                      <div class="socials">
+                                                        <a class="social" href="404.html" aria-label="Stackly on Instagram" title="Instagram">
+                                                          <i class="fa-brands fa-instagram">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on Facebook" title="Facebook">
+                                                          <i class="fa-brands fa-facebook-f">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on X" title="X">
+                                                          <i class="fa-brands fa-x-twitter">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on YouTube" title="YouTube">
+                                                          <i class="fa-brands fa-youtube">
+                                                          </i>
+                                                        </a>
+                                                        <a class="social" href="404.html" aria-label="Stackly on TikTok" title="TikTok">
+                                                          <i class="fa-brands fa-tiktok">
+                                                          </i>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Restaurant</h4>
+                                                      <a href="404.html">About Us</a>
+                                                      <a href="404.html">Our Story</a>
+                                                      <a href="404.html">Our Chefs</a>
+                                                      <a href="404.html">Branches</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Experience</h4>
+                                                      <a href="404.html">Our Menu</a>
+                                                      <a href="404.html">Reservations</a>
+                                                      <a href="404.html">Events</a>
+                                                      <a href="404.html">Private Dining</a>
+                                                    </div>
+                                                    <div class="footer-col">
+                                                      <h4>Support</h4>
+                                                      <a href="404.html">Contact</a>
+                                                      <a href="404.html">FAQ</a>
+                                                      <a href="404.html">Journal</a>
+                                                      <a href="404.html">Offers</a>
+                                                    </div>
+                                                    <div class="footer-col footer-contact">
+                                                      <h4>Visit Us</h4>
+                                                      <p>
+                                                        <i class="fa-solid fa-location-dot">
+                                                        </i>
+                                                        <span>12 Astor Lane, New York</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-phone">
+                                                        </i>
+                                                        <span>+1 212 555 0198</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-solid fa-envelope">
+                                                        </i>
+                                                        <span>concierge@stackly.example</span>
+                                                      </p>
+                                                      <p>
+                                                        <i class="fa-regular fa-clock">
+                                                        </i>
+                                                        <span>Open daily, 12 PM - 12 AM</span>
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="container footer-bottom">
+                                                    <span>© 2026 Stackly. Crafted for fine dining.</span>
+                                                    <span class="footer-legal">
+                                                      <a href="404.html">Privacy</a>
+                                                      <a href="404.html">Terms</a>
+                                                      <a href="404.html">Press</a>
+                                                    </span>
+                                                  </div>
+                                                </footer>
+                                                <script src="assets/js/storage.js">
+                                                </script>
+                                                <script src="assets/js/toast.js">
+                                                </script>
+                                                <script src="assets/js/modal.js">
+                                                </script>
+                                                <script src="assets/js/auth.js">
+                                                </script>
+                                                <script src="assets/js/menu.js">
+                                                </script>
+                                                <script src="assets/js/gallery.js">
+                                                </script>
+                                                <script src="assets/js/reservation.js">
+                                                </script>
+                                                <script src="assets/js/dashboard.js">
+                                                </script>
+                                                <script src="assets/js/charts.js">
+                                                </script>
+                                                <script src="assets/js/validation.js">
+                                                </script>
+                                                <script src="assets/js/darkmode.js">
+                                                </script>
+                                                <script src="assets/js/slider.js">
+                                                </script>
+                                                <script src="assets/js/animations.js"></script>
+                                                <script src="assets/js/main.js">
+                                                </script>
+                                              </body>
+                                            </html>

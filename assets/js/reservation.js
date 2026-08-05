@@ -1,0 +1,1 @@
+/* Reservation behavior is initialized from main.js so every page can share the same form contract. */

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chef Reports | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="chef-dashboard" data-view="Reports">
+    <main id="app">
+      <div class="dashboard-layout">
+        <aside class="sidebar">
+          <a class="dash-brand" href="index.html">
+            <img src="assets/images/stackly-logo.webp" alt="Stackly">
+          </a>
+          <span class="eyebrow">chef Portal</span>
+          <h3 data-user-name>Demo User</h3>
+          <span class="sidebar-email" data-user-email>guest@stackly.com</span>
+          <nav class="dash-nav">
+            <a class="" href="chef-dashboard.html">
+              <i class="fa-solid fa-diamond">
+              </i>Dashboard</a>
+              <a class="" href="chef-todays-orders.html">
+                <i class="fa-solid fa-bell-concierge">
+                </i>Today's Orders</a>
+                <a class="" href="chef-pending-orders.html">
+                  <i class="fa-solid fa-bell-concierge">
+                  </i>Pending Orders</a>
+                  <a class="" href="chef-completed-orders.html">
+                    <i class="fa-solid fa-bell-concierge">
+                    </i>Completed Orders</a>
+                    <a class="" href="chef-menu-management.html">
+                      <i class="fa-solid fa-utensils">
+                      </i>Menu Management</a>
+                      <a class="" href="chef-add-dish.html">
+                        <i class="fa-solid fa-utensils">
+                        </i>Add Dish</a>
+                        <a class="" href="chef-edit-dish.html">
+                          <i class="fa-solid fa-utensils">
+                          </i>Edit Dish</a>
+                          <a class="" href="chef-delete-dish.html">
+                            <i class="fa-solid fa-utensils">
+                            </i>Delete Dish</a>
+                            <a class="" href="chef-inventory-status.html">
+                              <i class="fa-solid fa-diamond">
+                              </i>Inventory Status</a>
+                              <a class="" href="chef-customer-reviews.html">
+                                <i class="fa-solid fa-user">
+                                </i>Customer Reviews</a>
+                                <a class="" href="chef-messages.html">
+                                  <i class="fa-solid fa-message">
+                                  </i>Messages</a>
+                                  <a class="active" href="chef-reports.html">
+                                    <i class="fa-solid fa-chart-line">
+                                    </i>Reports</a>
+                                    <a class="" href="chef-profile.html">
+                                      <i class="fa-solid fa-user">
+                                      </i>Profile</a>
+                                    </nav>
+                                    <div class="dash-side-foot">
+                                      <a href="index.html">
+                                        <i class="fa-solid fa-arrow-left">
+                                        </i> Back to site</a>
+                                        <button data-logout>
+                                          <i class="fa-solid fa-right-from-bracket">
+                                          </i> Sign out</button>
+                                        </div>
+                                      </aside>
+                                      <div class="dashboard-main">
+                                        <div class="inline-actions">
+                                          <div>
+                                            <span class="eyebrow">Chef Portal</span>
+                                            <h1>Reports</h1>
+                                          </div>
+                                          <div class="dash-actions">
+                                            <div class="dash-user">
+                                              <i class="fa-solid fa-circle-user">
+                                              </i>
+                                              <div>
+                                                <strong data-user-name>Demo User</strong>
+                                                <span data-user-email>guest@stackly.com</span>
+                                              </div>
+                                            </div>
+                                            <a class="btn btn-primary" href="404.html">
+                                              <i class="fa-solid fa-plus">
+                                              </i> New Booking</a>
+                                            </div>
+                                          </div>
+                                          <div id="dashPanel">
+                                            <section class="section mt-0">
+                                              <div class="surface-pad">
+                                                <h2>Reports</h2>
+                                                <p class="lead">Reports tools are functional demo panels backed by LocalStorage data for Stackly chef operations.</p>
+                                                <form class="form mt-2" onsubmit="event.preventDefault(); toast('Reports saved.');">
+                                                  <div class="form-grid">
+                                                    <input required placeholder="Title">
+                                                    <input required placeholder="Status or category">
+                                                  </div>
+                                                  <textarea placeholder="Notes">
+                                                  </textarea>
+                                                  <button class="btn btn-primary">
+                                                    <i class="fa-solid fa-floppy-disk">
+                                                    </i> Save Reports</button>
+                                                  </form>
+                                                </div>
+                                              </section>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </main>
+                                      <script src="assets/js/storage.js">
+                                      </script>
+                                      <script src="assets/js/toast.js">
+                                      </script>
+                                      <script src="assets/js/modal.js">
+                                      </script>
+                                      <script src="assets/js/auth.js">
+                                      </script>
+                                      <script src="assets/js/menu.js">
+                                      </script>
+                                      <script src="assets/js/gallery.js">
+                                      </script>
+                                      <script src="assets/js/reservation.js">
+                                      </script>
+                                      <script src="assets/js/dashboard.js">
+                                      </script>
+                                      <script src="assets/js/charts.js">
+                                      </script>
+                                      <script src="assets/js/validation.js">
+                                      </script>
+                                      <script src="assets/js/darkmode.js">
+                                      </script>
+                                      <script src="assets/js/slider.js">
+                                      </script>
+                                      <script src="assets/js/animations.js"></script>
+                                      <script src="assets/js/main.js">
+                                      </script>
+                                    </body>
+                                  </html>

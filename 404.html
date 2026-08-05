@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>404 | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+      body.error-page {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        overflow-x: hidden;
+        background:
+          linear-gradient(rgba(12, 10, 8, 0.68), rgba(12, 10, 8, 0.78)),
+          url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=webp&fit=crop&w=1600&q=80") center/cover no-repeat;
+        color: #fff;
+        font-family: "Outfit", Arial, sans-serif;
+      }
+
+      .error-main {
+        width: min(92vw, 720px);
+        padding: 56px 24px;
+        text-align: center;
+      }
+
+      .error-code {
+        display: block;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(7rem, 24vw, 14rem);
+        font-weight: 800;
+        line-height: 0.82;
+        color: #f4b860;
+        text-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+      }
+
+      .error-main h1 {
+        margin: 28px 0 12px;
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .error-main p {
+        max-width: 560px;
+        margin: 0 auto 30px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      .error-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .error-actions .btn {
+        min-width: 154px;
+      }
+
+      @media (max-width: 520px) {
+        .error-main {
+          padding: 40px 18px;
+        }
+
+        .error-actions {
+          display: grid;
+        }
+
+        .error-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="error-page" data-page="404">
+    <main class="error-main" aria-labelledby="error-title">
+      <span class="error-code">404</span>
+      <h1 id="error-title">Page not found</h1>
+      <p>The page you are looking for may have moved, been removed, or never made it to the table.</p>
+      <div class="error-actions">
+        <a class="btn btn-primary" href="index.html">
+          <i class="fa-solid fa-house"></i>
+          Back to Home
+        </a>
+        <button class="btn btn-ghost" type="button" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+          Go Back
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

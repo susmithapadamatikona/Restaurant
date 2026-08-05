@@ -1,0 +1,12 @@
+.menu-toolbar { display: grid; grid-template-columns: 1.2fr .8fr auto; gap: 12px; margin-bottom: 24px; }
+.filter-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+.menu-card .card-body { display: grid; gap: 10px; }
+.menu-title-row { display: flex; align-items: start; gap: 12px; }
+.pagination { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+.dish-detail { display: grid; grid-template-columns: 1fr .8fr; gap: 32px; align-items: start; }
+.dish-gallery { display: grid; gap: 12px; }
+.dish-gallery-main { height: 470px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); }
+.thumbs { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.thumbs img { height: 90px; width: 100%; object-fit: cover; border-radius: var(--radius); cursor: pointer; border: 1px solid var(--border); }
+.nutrition { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.nutrition div { padding: 14px; background: rgba(255,255,255,.05); border-radius: var(--radius); text-align: center; }

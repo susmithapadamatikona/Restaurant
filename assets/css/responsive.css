@@ -1,0 +1,73 @@
+@media (max-width: 980px) {
+  .hamburger { display: grid; }
+  .nav-links { position: fixed; inset: 76px 0 auto; max-height: calc(100vh - 76px); overflow-y: auto; background: rgba(15,27,29,.98); display: none; padding: 18px; flex-direction: column; align-items: stretch; border-bottom: 1px solid var(--border); }
+  .nav-links.open { display: flex; }
+  /* Account controls move out of the header bar and into the hamburger panel,
+     leaving just the logo and the toggle on the top row. */
+  .nav-actions .nav-auth, .nav-actions .profile-menu { display: none; }
+  .nav-auth-mobile { display: grid; gap: 10px; margin-top: 14px; padding-top: 16px; border-top: 1px solid var(--border); }
+  /* .nav-links a is more specific than .btn-*, so restate the button colours. */
+  .nav-auth-mobile .btn { justify-content: center; font-size: .94rem; }
+  .nav-auth-mobile .btn-primary { color: #111; }
+  .nav-auth-mobile .btn-ghost { color: var(--heading); }
+  .mega-panel { position: static; width: 100%; display: none; margin-top: 10px; }
+  .mega.open .mega-panel { display: grid; }
+  .grid-4, .grid-3, .stat-row, .widget-grid { grid-template-columns: repeat(2,1fr); }
+  .grid-2, .split, .dish-detail, .dashboard-layout, .chart-grid { grid-template-columns: 1fr; }
+  .quick-reserve, .menu-toolbar { grid-template-columns: 1fr 1fr; }
+  .sidebar { position: static; height: auto; overflow: visible; }
+  .dash-side-foot { margin-top: 12px; }
+  .dash-nav { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 24px; }
+  .footer-brand, .footer-contact { grid-column: 1 / -1; }
+  .footer-cta { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .newsletter { width: 100%; }
+  .auth-split { grid-template-columns: 1fr; min-height: 0; }
+  .auth-brand { position: static; height: auto; min-height: 62vh; align-self: stretch; padding: 30px 20px; gap: 24px; }
+  .auth-brand h2 { font-size: 1.55rem; }
+  .auth-brand-inner { max-width: 100%; }
+  .auth-points { margin-top: 20px; }
+  .auth-panel { padding: 46px 20px; }
+  .page-hero { min-height: 520px; }
+  .page-hero .container { padding: 100px 0 62px; }
+  /* Grid and flex children default to min-width:auto, so a wide descendant sets
+     a floor on the whole track. The data tables are min-width:720px inside a
+     scrolling .table-wrap, which forced columns wider than the viewport. Below
+     980px these tracks are already single-column, so allowing them to shrink
+     changes no proportions - it just hands scrolling back to the wrapper. */
+  .split > *, .grid > *, .dish-detail > *, .chart-grid > *,
+  .footer-grid > *, .dashboard-layout > *, .widget-grid > *,
+  .stat-row > * { min-width: 0; }
+  /* Long unbroken strings (emails, references) must not set a floor either. */
+  body { overflow-wrap: break-word; }
+}
+@media (max-width: 640px) {
+  .section { padding: 64px 0; }
+  .grid-4, .grid-3, .stat-row, .widget-grid, .form-grid, .quick-reserve, .menu-toolbar, .nutrition, .footer-grid { grid-template-columns: 1fr; }
+  .section-head { display: block; }
+  .hero { min-height: auto; }
+  .hero-content { padding: 72px 0 92px; }
+  .page-hero { min-height: 420px; }
+  .page-hero .container { padding: 80px 0 48px; }
+  .reservation-ribbon { margin-top: -38px; }
+  .media-stack { min-height: auto; }
+  .media-stack img, .media-stack img:nth-child(2) { position: static; width: 100%; height: 260px; margin-bottom: 12px; }
+  .dashboard-main { padding: 20px 16px; }
+  .dash-nav { grid-template-columns: 1fr; }
+  .footer-bottom { display: block; }
+  .cursor-dot { display: none; }
+  .auth-head h1 { font-size: 1.7rem; }
+  .social-row { grid-template-columns: repeat(2, 1fr); }
+  .dash-actions { width: 100%; }
+  .dash-user { width: 100%; }
+}
+@media (max-width: 380px) {
+  /* Only the logo and the toggle share this row now, so a light trim is enough. */
+  .brand img { height: 34px; max-width: 150px; }
+}
+/* Dashboards keep their 270px sidebar down to 980px, so the content track has
+   to be allowed to shrink at tablet-landscape width or the wide tables push
+   the layout past the viewport. */
+@media (max-width: 1024px) {
+  .dashboard-layout > *, .dashboard-main { min-width: 0; }
+}

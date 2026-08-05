@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Settings | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="settings">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly">
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav-auth-mobile">
+            <a class="btn btn-ghost" href="login.html">
+              <i class="fa-solid fa-right-to-bracket">
+              </i> Login</a>
+              <a class="btn btn-primary" href="register.html">
+                <i class="fa-solid fa-user-plus">
+                </i> Register</a>
+              </div>
+            </nav>
+            <div class="nav-actions">
+              <a class="btn btn-ghost nav-auth" href="login.html">
+                <i class="fa-solid fa-right-to-bracket">
+                </i> Login</a>
+                <a class="btn btn-primary nav-auth" href="register.html">
+                  <i class="fa-solid fa-user-plus">
+                  </i> Register</a>
+                  <button class="icon-btn hamburger" title="Menu">
+                    <i class="fa-solid fa-bars">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </header>
+            <main id="app">
+              <section class="page-hero">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=900&q=38" alt="Settings">
+                <div class="container">
+                  <span class="eyebrow">Stackly</span>
+                  <h1>Settings</h1>
+                  <p class="lead">Adjust theme, notifications, dashboard preferences, and privacy controls.</p>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container grid grid-2">
+                  <article class="surface-pad">
+                    <span class="eyebrow">Appearance</span>
+                    <h3>Theme and motion</h3>
+                    <p class="muted">These demo settings are written to LocalStorage on this device.</p>
+                    <div class="field mt-2">
+                      <label>Colour theme</label>
+                      <select>
+                        <option>Dark (default)</option>
+                        <option>Light</option>
+                        <option>Match system</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Reduce motion</label>
+                      <select>
+                        <option>Off</option>
+                        <option>On</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Text size</label>
+                      <select>
+                        <option>Standard</option>
+                        <option>Large</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article class="surface-pad">
+                    <span class="eyebrow">Notifications</span>
+                    <h3>What reaches you</h3>
+                    <p class="muted">Reservation alerts always send. Everything else is optional.</p>
+                    <div class="field mt-2">
+                      <label>Reservation reminders</label>
+                      <select>
+                        <option>24 hours before</option>
+                        <option>48 hours before</option>
+                        <option>Off</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Event and residency notices</label>
+                      <select>
+                        <option>On</option>
+                        <option>Off</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>The journal</label>
+                      <select>
+                        <option>Twice monthly</option>
+                        <option>Off</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article class="surface-pad">
+                    <span class="eyebrow">Dining Preferences</span>
+                    <h3>What the kitchen assumes</h3>
+                    <p class="muted">Applied automatically to every new booking you make.</p>
+                    <div class="field mt-2">
+                      <label>Default guest count</label>
+                      <input type="number" min="1" max="18" value="2">
+                    </div>
+                    <div class="field mt-2">
+                      <label>Dietary profile</label>
+                      <select>
+                        <option>None</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                        <option>Gluten-free</option>
+                        <option>Pescatarian</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Seating preference</label>
+                      <select>
+                        <option>No preference</option>
+                        <option>Chef counter</option>
+                        <option>Window</option>
+                        <option>Quiet corner</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article class="surface-pad">
+                    <span class="eyebrow">Privacy and Data</span>
+                    <h3>Your stored data</h3>
+                    <p class="muted">This demo keeps everything in your browser. Nothing is sent to a server.</p>
+                    <div class="field mt-2">
+                      <label>Save favourites on this device</label>
+                      <select>
+                        <option>On</option>
+                        <option>Off</option>
+                      </select>
+                    </div>
+                    <div class="field mt-2">
+                      <label>Keep reservation history</label>
+                      <select>
+                        <option>12 months</option>
+                        <option>Until I clear it</option>
+                      </select>
+                    </div>
+                    <div class="inline-actions mt-3">
+                      <button class="btn btn-primary">Save Settings</button>
+                      <button class="btn btn-ghost">Clear Local Data</button>
+                    </div>
+                  </article>
+                </div>
+              </section>
+              <section class="section alt">
+                <div class="container section-head">
+                  <div>
+                    <span class="eyebrow">Account</span>
+                    <h2>Access and security.</h2>
+                  </div>
+                </div>
+                <div class="container grid grid-3">
+                  <article class="card card-body">
+                    <h3>Change password</h3>
+                    <p>Use the reset link on the login page. Demo accounts fall back to Stackly123 whenever the page reloads.</p>
+                  </article>
+                  <article class="card card-body">
+                    <h3>Signed-in devices</h3>
+                    <p>This build stores one session per browser. Clearing local data signs you out everywhere on this device.</p>
+                  </article>
+                  <article class="card card-body">
+                    <h3>Delete account</h3>
+                    <p>Removes your profile, favourites, and booking history from this browser immediately and without confirmation.</p>
+                  </article>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container section-head">
+                  <div>
+                    <span class="eyebrow">Language & Region</span>
+                    <h2>Applied across every room you book.</h2>
+                  </div>
+                </div>
+                <div class="container grid grid-2">
+                  <article class="surface-pad">
+                    <h3>Display</h3>
+                    <p class="muted">Affects how dates, times, and prices are shown to you.</p>
+                    <div class="form-grid mt-2">
+                      <div class="field">
+                        <label>Language</label>
+                        <select>
+                          <option>English (US)</option>
+                          <option>English (UK)</option>
+                          <option>Français</option>
+                          <option>日本語</option>
+                          <option>हिन्दी</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Currency</label>
+                        <select>
+                          <option>USD ($)</option>
+                          <option>GBP (£)</option>
+                          <option>EUR (€)</option>
+                          <option>AED (د.إ)</option>
+                          <option>JPY (¥)</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Time format</label>
+                        <select>
+                          <option>12 hour</option>
+                          <option>24 hour</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Home time zone</label>
+                        <select>
+                          <option>America/New_York</option>
+                          <option>Europe/London</option>
+                          <option>Asia/Dubai</option>
+                          <option>Asia/Kolkata</option>
+                          <option>Asia/Tokyo</option>
+                        </select>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="surface-pad">
+                    <h3>Communication</h3>
+                    <p class="muted">How and when the concierge desk reaches you.</p>
+                    <div class="form-grid mt-2">
+                      <div class="field">
+                        <label>Preferred channel</label>
+                        <select>
+                          <option>Email</option>
+                          <option>SMS</option>
+                          <option>Phone call</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Confirmation language</label>
+                        <select>
+                          <option>Match display language</option>
+                          <option>Always English</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Quiet hours</label>
+                        <select>
+                          <option>10 PM - 8 AM</option>
+                          <option>None</option>
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Marketing consent</label>
+                        <select>
+                          <option>Journal only</option>
+                          <option>Journal and events</option>
+                          <option>None</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">Save Preferences</button>
+                  </article>
+                </div>
+              </section>
+              <section class="section alt">
+                <div class="container section-head">
+                  <div>
+                    <span class="eyebrow">Signed-in Devices</span>
+                    <h2>Sessions currently holding your data.</h2>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="table-wrap">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Device</th>
+                          <th>Browser</th>
+                          <th>Location</th>
+                          <th>Last Active</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>This device</td>
+                          <td>Chrome, Windows</td>
+                          <td>New York, US</td>
+                          <td>Now</td>
+                          <td>
+                            <span class="status success">Current</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>iPhone 15</td>
+                          <td>Safari, iOS</td>
+                          <td>New York, US</td>
+                          <td>2 days ago</td>
+                          <td>
+                            <span class="status info">Active</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>MacBook Air</td>
+                          <td>Safari, macOS</td>
+                          <td>London, UK</td>
+                          <td>3 weeks ago</td>
+                          <td>
+                            <span class="status warning">Idle</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="inline-actions mt-3">
+                    <button class="btn btn-ghost">Sign Out Other Devices</button>
+                    <span class="muted">This demo stores one session per browser, so signing out elsewhere only clears local data.</span>
+                  </div>
+                </div>
+              </section>
+              <section class="section">
+                <div class="container split">
+                  <div>
+                    <span class="eyebrow">Your Data</span>
+                    <h2>Take it with you, or wipe it.</h2>
+                    <p class="lead">Everything this build knows about you sits in your browser's LocalStorage. There is no server copy to request and nothing to delete on our side.</p>
+                    <div class="surface-pad">
+                      <p>
+                        <strong>Export:</strong> downloads your profile, favourites, and booking history as a single JSON file.</p>
+                        <p>
+                          <strong>Import:</strong> restores that file on another browser or after clearing your data.</p>
+                          <p>
+                            <strong>Clear:</strong> removes everything immediately. It cannot be undone and there is no backup.</p>
+                          </div>
+                          <div class="inline-actions mt-3">
+                            <button class="btn btn-primary">
+                              <i class="fa-solid fa-download">
+                              </i> Export Data</button>
+                              <button class="btn btn-ghost">
+                                <i class="fa-solid fa-upload">
+                                </i> Import</button>
+                              </div>
+                            </div>
+                            <div class="media-stack">
+                              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?fm=webp&fit=crop&w=760&q=44" alt="Restaurant detail">
+                              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?fm=webp&fit=crop&w=760&q=44" alt="Table setting">
+                            </div>
+                          </div>
+                        </section>
+                      </main>
+                      <footer class="site-footer">
+                        <div class="container footer-cta">
+                          <div>
+                            <span class="eyebrow">The Guest List</span>
+                            <h3>Kitchen notes, and residency seats before they go public.</h3>
+                          </div>
+                          <form class="newsletter" data-newsletter>
+                            <input name="email" type="email" placeholder="Your email address" required>
+                            <button class="btn btn-primary">
+                              <i class="fa-solid fa-paper-plane">
+                              </i> Subscribe</button>
+                            </form>
+                          </div>
+                          <div class="container footer-grid">
+                            <div class="footer-brand">
+                              <a class="brand" href="404.html">
+                                <img src="assets/images/stackly-logo.webp" alt="Stackly">
+                              </a>
+                              <p>Luxury fine dining, cinematic tasting menus, private salons, and chef-led hospitality across seven city rooms.</p>
+                              <div class="socials">
+                                <a class="social" href="404.html" aria-label="Stackly on Instagram" title="Instagram">
+                                  <i class="fa-brands fa-instagram">
+                                  </i>
+                                </a>
+                                <a class="social" href="404.html" aria-label="Stackly on Facebook" title="Facebook">
+                                  <i class="fa-brands fa-facebook-f">
+                                  </i>
+                                </a>
+                                <a class="social" href="404.html" aria-label="Stackly on X" title="X">
+                                  <i class="fa-brands fa-x-twitter">
+                                  </i>
+                                </a>
+                                <a class="social" href="404.html" aria-label="Stackly on YouTube" title="YouTube">
+                                  <i class="fa-brands fa-youtube">
+                                  </i>
+                                </a>
+                                <a class="social" href="404.html" aria-label="Stackly on TikTok" title="TikTok">
+                                  <i class="fa-brands fa-tiktok">
+                                  </i>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="footer-col">
+                              <h4>Restaurant</h4>
+                              <a href="404.html">About Us</a>
+                              <a href="404.html">Our Story</a>
+                              <a href="404.html">Our Chefs</a>
+                              <a href="404.html">Branches</a>
+                            </div>
+                            <div class="footer-col">
+                              <h4>Experience</h4>
+                              <a href="404.html">Our Menu</a>
+                              <a href="404.html">Reservations</a>
+                              <a href="404.html">Events</a>
+                              <a href="404.html">Private Dining</a>
+                            </div>
+                            <div class="footer-col">
+                              <h4>Support</h4>
+                              <a href="404.html">Contact</a>
+                              <a href="404.html">FAQ</a>
+                              <a href="404.html">Journal</a>
+                              <a href="404.html">Offers</a>
+                            </div>
+                            <div class="footer-col footer-contact">
+                              <h4>Visit Us</h4>
+                              <p>
+                                <i class="fa-solid fa-location-dot">
+                                </i>
+                                <span>12 Astor Lane, New York</span>
+                              </p>
+                              <p>
+                                <i class="fa-solid fa-phone">
+                                </i>
+                                <span>+1 212 555 0198</span>
+                              </p>
+                              <p>
+                                <i class="fa-solid fa-envelope">
+                                </i>
+                                <span>concierge@stackly.example</span>
+                              </p>
+                              <p>
+                                <i class="fa-regular fa-clock">
+                                </i>
+                                <span>Open daily, 12 PM - 12 AM</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="container footer-bottom">
+                            <span>© 2026 Stackly. Crafted for fine dining.</span>
+                            <span class="footer-legal">
+                              <a href="404.html">Privacy</a>
+                              <a href="404.html">Terms</a>
+                              <a href="404.html">Press</a>
+                            </span>
+                          </div>
+                        </footer>
+                        <script src="assets/js/storage.js">
+                        </script>
+                        <script src="assets/js/toast.js">
+                        </script>
+                        <script src="assets/js/modal.js">
+                        </script>
+                        <script src="assets/js/auth.js">
+                        </script>
+                        <script src="assets/js/menu.js">
+                        </script>
+                        <script src="assets/js/gallery.js">
+                        </script>
+                        <script src="assets/js/reservation.js">
+                        </script>
+                        <script src="assets/js/dashboard.js">
+                        </script>
+                        <script src="assets/js/charts.js">
+                        </script>
+                        <script src="assets/js/validation.js">
+                        </script>
+                        <script src="assets/js/darkmode.js">
+                        </script>
+                        <script src="assets/js/slider.js">
+                        </script>
+                        <script src="assets/js/animations.js"></script>
+                        <script src="assets/js/main.js">
+                        </script>
+                      </body>
+                    </html>

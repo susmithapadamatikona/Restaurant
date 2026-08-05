@@ -1,0 +1,31 @@
+.site-footer { background: #0b1415; border-top: 1px solid var(--border); padding: 0 0 22px; }
+
+/* Newsletter band, sits above the link columns */
+.footer-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; padding: 36px 0; border-bottom: 1px solid var(--border); }
+.footer-cta h3 { margin: 5px 0 0; font-size: 1.28rem; line-height: 1.35; color: var(--heading); }
+.newsletter { display: flex; gap: 10px; width: min(440px, 100%); margin: 0; }
+.newsletter input { flex: 1; }
+.newsletter .btn { white-space: nowrap; }
+
+/* Link columns */
+.footer-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr 1.3fr; gap: 32px; padding: 42px 0 34px; }
+.footer-brand .brand img { height: 38px; width: auto; max-width: 170px; object-fit: contain; }
+.footer-brand p { color: var(--light); font-size: .92rem; line-height: 1.7; margin: 18px 0 20px; max-width: 330px; }
+/* Small-caps headings - the old serif h3 was visually heavier than the links
+   it was meant to label, which is what made the footer feel unbalanced. */
+.footer-grid h4 { margin: 0 0 16px; font-family: var(--font-body); font-size: .78rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
+.footer-grid a { display: block; color: var(--light); font-size: .93rem; margin: 0 0 11px; transition: color .2s ease, padding-left .2s ease; }
+.footer-grid a:hover { color: var(--gold); padding-left: 4px; }
+.footer-contact p { display: flex; align-items: flex-start; gap: 11px; color: var(--light); font-size: .9rem; line-height: 1.55; margin: 0 0 12px; }
+.footer-contact i { color: var(--gold); width: 15px; flex-shrink: 0; margin-top: 4px; }
+
+/* Social icons */
+.socials { display: flex; gap: 10px; flex-wrap: wrap; }
+.socials .social { display: grid; place-items: center; width: 40px; height: 40px; margin: 0; padding: 0; border-radius: 50%; border: 1px solid var(--border); background: rgba(255,255,255,.04); color: var(--light); font-size: .95rem; transition: background .22s ease, color .22s ease, border-color .22s ease, transform .22s ease; }
+.socials .social:hover { background: var(--gold); border-color: var(--gold); color: #111; padding-left: 0; transform: translateY(-3px); }
+
+/* Bottom bar */
+.footer-bottom { padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: .88rem; }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { color: var(--muted); }
+.footer-legal a:hover { color: var(--gold); }

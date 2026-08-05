@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Register | Stackly</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="page-shell" data-page="auth" data-auth="register">
+    <main id="app">
+      <section class="auth-split">
+        <a class="auth-back" href="index.html">
+          <i class="fa-solid fa-arrow-left">
+          </i> Back to site</a>
+          <div class="auth-brand">
+            <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?fm=webp&fit=crop&w=900&q=56" alt="Stackly dining room">
+            <a class="auth-logo-link" href="index.html">
+              <img class="auth-logo" src="assets/images/stackly-logo.webp" alt="Stackly">
+            </a>
+            <div class="auth-brand-inner">
+              <span class="eyebrow">Stackly Access</span>
+              <h2>Join the guest list.</h2>
+              <p class="lead">One account carries your preferences and booking history across all seven rooms.</p>
+              <div class="auth-points">
+                <div class="auth-point">
+                  <i class="fa-solid fa-bolt">
+                  </i>
+                  <div>
+                    <strong>Faster booking</strong>
+                    <span>Your usual guest count and seating preference applied automatically.</span>
+                  </div>
+                </div>
+                <div class="auth-point">
+                  <i class="fa-solid fa-heart">
+                  </i>
+                  <div>
+                    <strong>Saved favourites</strong>
+                    <span>Mark dishes as you browse and the kitchen sees them when you book.</span>
+                  </div>
+                </div>
+                <div class="auth-point">
+                  <i class="fa-solid fa-cake-candles">
+                  </i>
+                  <div>
+                    <strong>Birthday course</strong>
+                    <span>A dessert course on us during your birthday month, every year.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="auth-panel">
+            <form class="auth-form" id="registerForm">
+              <div class="auth-head">
+                <h1>Create Account</h1>
+                <p>It takes about a minute. Everything is stored on this device only.</p>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="firstName">First name</label>
+                  <input id="firstName" name="firstName" placeholder="Amelia" required>
+                </div>
+                <div class="field">
+                  <label for="lastName">Last name</label>
+                  <input id="lastName" name="lastName" placeholder="Hart" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+1 212 555 0198" required>
+                </div>
+                <div class="field">
+                  <label for="birthday">Date of birth</label>
+                  <input id="birthday" name="birthday" type="date">
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="branch">Preferred branch</label>
+                  <select id="branch" name="branch">
+                    <option>New York - Astor Flagship</option>
+                    <option>London - Marylebone House</option>
+                    <option>Dubai - Marina Terrace</option>
+                    <option>Mumbai - Colaba Pavilion</option>
+                    <option>Singapore - Keong Saik Salon</option>
+                    <option>Paris - Rue Saint-Marc</option>
+                    <option>Tokyo - Aoyama Counter</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="dietary">Dietary profile</label>
+                  <select id="dietary" name="dietary">
+                    <option>None</option>
+                    <option>Vegetarian</option>
+                    <option>Vegan</option>
+                    <option>Gluten-free</option>
+                    <option>Nut-free</option>
+                    <option>Pescatarian</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="role">Register as</label>
+                <select id="role" name="role">
+                  <option value="customer">Customer</option>
+                  <option value="chef">Chef</option>
+                  <option value="admin">Admin</option>
+                </select>
+                <p class="hint">Customer books tables. Chef sees the kitchen queue. Admin sees every branch.</p>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="password">Password</label>
+                  <div class="pw-field">
+                    <input id="password" name="password" data-strength type="password" placeholder="Password" required>
+                    <button type="button" title="Show password" data-password-toggle="[name=password]">
+                      <i class="fa-solid fa-eye">
+                      </i>
+                    </button>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="confirm">Confirm password</label>
+                  <div class="pw-field">
+                    <input id="confirm" name="confirm" type="password" placeholder="Confirm password" required>
+                    <button type="button" title="Show password" data-password-toggle="[name=confirm]">
+                      <i class="fa-solid fa-eye">
+                      </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="strength">
+                <span>
+                </span>
+              </div>
+              <p class="hint">At least 8 characters. Add a capital letter and a number to strengthen it.</p>
+              <label class="checkbox">
+                <input type="checkbox" name="terms" required>
+                <span>I agree to the <a href="404.html">terms of service</a> and <a href="404.html">privacy policy</a>.</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="updates" checked>
+                <span>Email me the journal and early access to residency evenings.</span>
+              </label>
+              <button class="btn btn-primary full">
+                <i class="fa-solid fa-user-plus">
+                </i> Create Account</button>
+                <div class="auth-divider">or sign up with</div>
+                <div class="social-row">
+                  <a class="social-btn" href="404.html" title="Sign up with Google" aria-label="sign up with Google">
+                    <i class="fa-brands fa-google">
+                    </i>
+                  </a>
+                  <a class="social-btn" href="404.html" title="Sign up with Facebook" aria-label="sign up with Facebook">
+                    <i class="fa-brands fa-facebook-f">
+                    </i>
+                  </a>
+                  <a class="social-btn" href="404.html" title="Sign up with Apple" aria-label="sign up with Apple">
+                    <i class="fa-brands fa-apple">
+                    </i>
+                  </a>
+                  <a class="social-btn" href="404.html" title="Sign up with X" aria-label="sign up with X">
+                    <i class="fa-brands fa-x-twitter">
+                    </i>
+                  </a>
+                </div>
+                <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a>
+              </p>
+            </form>
+          </div>
+        </section>
+      </main>
+      <script src="assets/js/storage.js">
+      </script>
+      <script src="assets/js/toast.js">
+      </script>
+      <script src="assets/js/modal.js">
+      </script>
+      <script src="assets/js/auth.js">
+      </script>
+      <script src="assets/js/menu.js">
+      </script>
+      <script src="assets/js/gallery.js">
+      </script>
+      <script src="assets/js/reservation.js">
+      </script>
+      <script src="assets/js/dashboard.js">
+      </script>
+      <script src="assets/js/charts.js">
+      </script>
+      <script src="assets/js/validation.js">
+      </script>
+      <script src="assets/js/darkmode.js">
+      </script>
+      <script src="assets/js/slider.js">
+      </script>
+      <script src="assets/js/animations.js"></script>
+      <script src="assets/js/main.js">
+      </script>
+    </body>
+  </html>
