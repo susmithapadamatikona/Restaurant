@@ -138,6 +138,7 @@ function initChrome() {
   profile?.querySelector("button")?.addEventListener("click", () => profile.classList.toggle("open"));
   document.querySelectorAll("[data-logout]").forEach(btn => btn.addEventListener("click", () => {
     localStorage.removeItem("currentUser");
+    sessionStorage.removeItem("currentUser");
     toast("Signed out.");
     setTimeout(() => location.href = "login.html", 400);
   }));
@@ -272,7 +273,7 @@ function dishCard(d) {
 }
 function reservationForm(compact = false) {
   return `<form class="${compact ? "quick-reserve glass" : "form surface-pad"}" data-reservation>
-    <input name="name" placeholder="Guest name" required><input name="date" type="date" required><input name="time" type="time" required><input name="guests" type="number" min="1" max="18" placeholder="Guests" required>${compact ? "" : `<textarea name="request" placeholder="Occasion, allergies, seating preference"></textarea>`}<button class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Reserve</button>
+    <input name="name" placeholder="Guest name" required><input name="date" type="date" required><input name="time" type="time" required><input name="guests" type="number" min="1" max="18" placeholder="Guests" required>${compact ? "" : `<textarea name="request" maxlength="240" aria-describedby="requestHint" placeholder="Occasion, allergies, seating preference"></textarea><p class="hint" id="requestHint">Optional. Up to 240 characters for occasions, allergies, accessibility needs, or seating preferences.</p>`}<button class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Reserve</button>
   </form>`;
 }
 function attachFavorites() {

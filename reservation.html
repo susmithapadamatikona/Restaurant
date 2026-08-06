@@ -72,8 +72,8 @@
                     <input name="date" type="date" required>
                     <input name="time" type="time" required>
                     <input name="guests" type="number" min="1" max="18" placeholder="Guests" required>
-                    <textarea name="request" placeholder="Occasion, allergies, seating preference">
-                    </textarea>
+                    <textarea name="request" maxlength="240" aria-describedby="requestHint" placeholder="Occasion, allergies, seating preference"></textarea>
+                    <p class="hint" id="requestHint">Optional. Up to 240 characters for occasions, allergies, accessibility needs, or seating preferences.</p>
                     <button class="btn btn-primary">
                       <i class="fa-solid fa-calendar-check">
                       </i> Reserve</button>

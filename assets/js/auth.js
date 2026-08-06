@@ -1,4 +1,32 @@
-function currentUser() { return TastyStorage.get("currentUser", null); }
+function currentUser() {
+  return TastyStorage.get("currentUser", null) || getSessionUser();
+}
+function getSessionUser() {
+  try { return JSON.parse(sessionStorage.getItem("currentUser")) || null; }
+  catch { return null; }
+}
+function setSignedInUser(user, remember) {
+  if (remember) {
+    sessionStorage.removeItem("currentUser");
+    TastyStorage.set("currentUser", user);
+    return;
+  }
+  localStorage.removeItem("currentUser");
+  sessionStorage.setItem("currentUser", JSON.stringify(user));
+}
+function initRememberMe(login) {
+  const remember = login.remember;
+  if (!remember) return;
+  const hint = login.querySelector("[data-remember-hint]");
+  const updateHint = () => {
+    if (!hint) return;
+    hint.textContent = remember.checked
+      ? "Your session will be restored when you reopen this browser."
+      : "Your session will end when this browser tab is closed.";
+  };
+  remember.addEventListener("change", updateHint);
+  updateHint();
+}
 function nameFromEmail(email) {
   return email.split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, c => c.toUpperCase()) || "Guest";
 }
@@ -7,6 +35,7 @@ function roleHome(role) {
 }
 function handleAuthForms() {
   const login = document.querySelector("#loginForm");
+  if (login) initRememberMe(login);
   if (login) login.addEventListener("submit", e => {
     e.preventDefault();
     const email = login.email.value.trim().toLowerCase();
@@ -19,8 +48,9 @@ function handleAuthForms() {
     if (!known) TastyStorage.set("users", [...users, stored]);
     // The role picked on the form decides which dashboard this session opens.
     const user = { ...stored, email, role };
-    TastyStorage.set("currentUser", user);
-    toast(`Welcome back, ${user.name}.`);
+    const remember = login.remember ? login.remember.checked : true;
+    setSignedInUser(user, remember);
+    toast(remember ? `Welcome back, ${user.name}.` : `Welcome back, ${user.name}. This sign-in is for this tab only.`);
     setTimeout(() => location.href = roleHome(role), 500);
   });
   const register = document.querySelector("#registerForm");
@@ -114,18 +144,18 @@ function renderAuth(app, mode) {
         <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
         <div class="form-grid">
           <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="+1 212 555 0198" required></div>
-          <div class="field"><label for="birthday">Date of birth</label><input id="birthday" name="birthday" type="date"></div>
+          <div class="field"><label for="birthday">Date of birth <span class="optional-label">Optional</span></label><input id="birthday" name="birthday" type="date"></div>
         </div>
         <div class="form-grid">
-          <div class="field"><label for="branch">Preferred branch</label><select id="branch" name="branch">${branches}</select></div>
-          <div class="field"><label for="dietary">Dietary profile</label><select id="dietary" name="dietary"><option>None</option><option>Vegetarian</option><option>Vegan</option><option>Gluten-free</option><option>Nut-free</option><option>Pescatarian</option></select></div>
+          <div class="field"><label for="branch">Preferred branch <span class="optional-label">Optional</span></label><select id="branch" name="branch"><option value="">No preference</option>${branches}</select></div>
+          <div class="field"><label for="dietary">Dietary profile <span class="optional-label">Optional</span></label><select id="dietary" name="dietary"><option value="">No preference</option><option>Vegetarian</option><option>Vegan</option><option>Gluten-free</option><option>Nut-free</option><option>Pescatarian</option></select></div>
         </div>
         ${roleField("Register as")}
         <div class="form-grid">${pwField("password", "Password", true)}${pwField("confirm", "Confirm password")}</div>
         <div class="strength"><span></span></div>
         <p class="hint">At least 8 characters. Add a capital letter and a number to strengthen it.</p>
         <label class="checkbox"><input type="checkbox" name="terms" required><span>I agree to the <a href="404.html">terms of service</a> and <a href="404.html">privacy policy</a>.</span></label>
-        <label class="checkbox"><input type="checkbox" name="updates" checked><span>Email me the journal and early access to residency evenings.</span></label>
+        <label class="checkbox"><input type="checkbox" name="updates" checked><span>Email me the journal and early access to residency evenings. <span class="optional-label">Optional</span></span></label>
         <button class="btn btn-primary full"><i class="fa-solid fa-user-plus"></i> Create Account</button>
         ${socialRow("sign up")}
         <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
@@ -161,9 +191,10 @@ function renderAuth(app, mode) {
       ${pwField("password", "Password")}
       ${roleField("Sign in as")}
       <div class="inline-actions">
-        <label class="checkbox"><input type="checkbox" name="remember" checked><span>Keep me signed in</span></label>
+        <label class="checkbox"><input type="checkbox" name="remember" aria-describedby="rememberHint" checked><span>Keep me signed in</span></label>
         <a class="btn btn-text" href="404.html">Forgot password?</a>
       </div>
+      <p class="hint" id="rememberHint" data-remember-hint></p>
       <button class="btn btn-primary full"><i class="fa-solid fa-right-to-bracket"></i> Sign In</button>
       ${socialRow("continue")}
       <p class="auth-foot">New here? <a href="register.html">Create an account</a></p>

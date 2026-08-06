@@ -77,14 +77,15 @@
                   <input id="phone" name="phone" type="tel" placeholder="Enter Your Phone Number" required>
                 </div>
                 <div class="field">
-                  <label for="birthday">Date of birth</label>
+                  <label for="birthday">Date of birth <span class="optional-label">Optional</span></label>
                   <input id="birthday" name="birthday" type="date">
                 </div>
               </div>
               <div class="form-grid">
                 <div class="field">
-                  <label for="branch">Preferred branch</label>
+                  <label for="branch">Preferred branch <span class="optional-label">Optional</span></label>
                   <select id="branch" name="branch">
+                    <option value="">No preference</option>
                     <option>New York - Astor Flagship</option>
                     <option>London - Marylebone House</option>
                     <option>Dubai - Marina Terrace</option>
@@ -95,9 +96,9 @@
                   </select>
                 </div>
                 <div class="field">
-                  <label for="dietary">Dietary profile</label>
+                  <label for="dietary">Dietary profile <span class="optional-label">Optional</span></label>
                   <select id="dietary" name="dietary">
-                    <option>None</option>
+                    <option value="">No preference</option>
                     <option>Vegetarian</option>
                     <option>Vegan</option>
                     <option>Gluten-free</option>
@@ -148,7 +149,7 @@
               </label>
               <label class="checkbox">
                 <input type="checkbox" name="updates" checked>
-                <span>Email me the journal and early access to residency evenings.</span>
+                <span>Email me the journal and early access to residency evenings. <span class="optional-label">Optional</span></span>
               </label>
               <button class="btn btn-primary full">
                 <i class="fa-solid fa-user-plus">

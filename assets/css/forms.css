@@ -2,6 +2,12 @@
 .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .field { display: grid; gap: 7px; }
 label { color: var(--light); font-size: .9rem; font-weight: 700; }
+.optional-label {
+  color: var(--muted);
+  font-size: .74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 input, select, textarea {
   width: 100%;
   min-width: 0;
