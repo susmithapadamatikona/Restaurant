@@ -294,25 +294,19 @@ function initPage() {
     else if (page === "auth") renderAuth(app, document.body.dataset.auth);
     else renderStandard(app, page);
   }
-  initCommonForms(); attachFavorites(); handleAuthForms(); initGallery(); initMenuInteractions(); initDashboardInteractions(); animateCounters(); initHeroSlider();
+  initCommonForms(); attachFavorites(); handleAuthForms(); initGallery(); initMenuInteractions(); initDashboardInteractions(); animateCounters();
 }
-/* Four hero backgrounds, cross-faded by initHeroSlider() in slider.js. */
-const HERO_IMAGES = [
-  "photo-1517248135467-4c7edcad34c4",   // dining room, gold screens
-  "photo-1414235077428-338989a2e8c0",   // plated course with champagne
-  "photo-1552566626-52f8b828add9",      // open kitchen and bar
-  "photo-1578474846511-04ba529f0b88"    // intimate low-lit room
-].map(id => img(id, "hero"));
+/* Single full-bleed background for the home hero: the dining room with the
+   gold screens. Held as one constant so the markup and this renderer stay in
+   step. */
+const HERO_IMAGE = img("photo-1517248135467-4c7edcad34c4", "hero");
 
-/** Stacked, cross-fading background layers for the home hero. */
-function heroSlider() {
-  const slides = HERO_IMAGES.map((src, i) =>
-    `<div class="hero-slide${i === 0 ? " is-active" : ""}" data-bg="${src}" style="background-image:url('${src}')"></div>`
-  ).join("");
-  return `<div class="hero-slider" data-hero-slider data-interval="800" aria-hidden="true">${slides}</div>`;
+/** Static background layer for the home hero. */
+function heroBackground() {
+  return `<img class="hero-bg hero-bg-clear" src="${HERO_IMAGE}" alt="" aria-hidden="true">`;
 }
 function renderHome(app) {
-  app.innerHTML = `<section class="hero home-hero">${heroSlider()}<div class="container hero-content"><div class="hero-panel"><span class="eyebrow">Luxury Fine Dining</span><h1>Stackly</h1><div class="lux-line"></div><p class="lead">A dark, cinematic dining house where tasting menus, private rituals, and chef-led service meet modern luxury.</p><div class="hero-actions"><a class="btn btn-primary" href="404.html"><i class="fa-solid fa-calendar-check"></i> Reserve Table</a><a class="btn btn-ghost" href="404.html"><i class="fa-solid fa-utensils"></i> Explore Menu</a></div></div></div></section><div class="reservation-ribbon"><div class="container">${reservationForm(true)}</div></div>
+  app.innerHTML = `<section class="hero home-hero">${heroBackground()}<div class="container hero-content"><div class="hero-panel"><span class="eyebrow">Luxury Fine Dining</span><h1>Stackly</h1><div class="lux-line"></div><p class="lead">A dark, cinematic dining house where tasting menus, private rituals, and chef-led service meet modern luxury.</p><div class="hero-actions"><a class="btn btn-primary" href="404.html"><i class="fa-solid fa-calendar-check"></i> Reserve Table</a><a class="btn btn-ghost" href="404.html"><i class="fa-solid fa-utensils"></i> Explore Menu</a></div><ul class="hero-meta"><li><i class="fa-solid fa-star"></i> <strong>4.9</strong> / 5 &middot; 2,400+ guests</li><li><i class="fa-solid fa-utensils"></i> 7-course tasting menu</li><li><i class="fa-solid fa-location-dot"></i> 7 city branches</li><li><i class="fa-solid fa-clock"></i> Dinner 6pm &ndash; 11:30pm</li></ul></div></div></section><div class="reservation-ribbon"><div class="container">${reservationForm(true)}</div></div>
   ${homeSections()}`;
 }
 function homeSections() {

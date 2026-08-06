@@ -3,6 +3,44 @@ function initDashboardInteractions() {
   const user = currentUser();
   document.querySelectorAll("[data-user-email]").forEach(el => { el.textContent = user?.email || "guest@stackly.com"; });
   document.querySelectorAll("[data-user-name]").forEach(el => { el.textContent = user?.name || "Demo User"; });
+  initDashboardMenu();
+}
+function initDashboardMenu() {
+  const sidebar = document.querySelector(".dashboard-layout .sidebar");
+  const main = document.querySelector(".dashboard-main");
+  if (!sidebar || !main) return;
+  let toggle = document.querySelector(".dashboard-menu-toggle");
+  if (!toggle) {
+    toggle = document.createElement("button");
+    toggle.className = "icon-btn dashboard-menu-toggle";
+    toggle.type = "button";
+    toggle.title = "Open dashboard menu";
+    toggle.setAttribute("aria-label", "Open dashboard menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    main.insertAdjacentElement("afterbegin", toggle);
+  }
+  let scrim = document.querySelector(".dash-scrim");
+  if (!scrim) {
+    scrim = document.createElement("button");
+    scrim.className = "dash-scrim";
+    scrim.type = "button";
+    scrim.setAttribute("aria-label", "Close dashboard menu");
+    document.body.appendChild(scrim);
+  }
+  const setOpen = open => {
+    document.body.classList.toggle("dash-menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.title = open ? "Close dashboard menu" : "Open dashboard menu";
+    toggle.setAttribute("aria-label", toggle.title);
+    toggle.innerHTML = `<i class="fa-solid fa-${open ? "xmark" : "bars"}"></i>`;
+  };
+  toggle.addEventListener("click", () => setOpen(!document.body.classList.contains("dash-menu-open")));
+  scrim.addEventListener("click", () => setOpen(false));
+  sidebar.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") setOpen(false);
+  });
 }
 function dashNavs(role) {
   if (role === "admin") return ["Dashboard","Customers","Reservations","Orders","Revenue","Menu Categories","Food Management","Chef Management","Branch Management","Gallery","Offers","Blog","Messages","Notifications","Reports","Analytics","Settings"];

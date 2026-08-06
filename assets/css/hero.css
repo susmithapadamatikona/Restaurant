@@ -1,49 +1,17 @@
-.hero { position: relative; min-height: calc(100vh - 76px); display: grid; align-items: center; overflow: hidden; background: var(--hero-gradient); }
+.hero { position: relative; min-height: calc(78vh - 76px); display: grid; align-items: center; overflow: hidden; background: var(--hero-gradient); }
 .hero video, .hero .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .42; transform: scale(1.04); }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,27,29,.9), rgba(15,27,29,.44), rgba(15,27,29,.78)); }
 .home-hero .hero-bg-clear { opacity: .72; transform: none; filter: saturate(1.06) contrast(1.04); }
 
 /* ==========================================================================
-   Premium hero background slider
-   Four stacked layers cross-fade on a timer. Only opacity and transform
-   animate, so the whole effect stays on the GPU compositor at 60fps.
+   Home hero background
+   One full-bleed still image behind the copy column.
    ========================================================================== */
-.home-hero { min-height: 100vh; width: 100%; }
-.hero-slider { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;                                   /* every layer starts hidden */
-  /* Fade must stay below the 800ms slide interval so each image fully lands. */
-  transition: opacity .45s ease-in-out;
-  /* The Ken Burns drift is deliberately NOT tied to .is-active. Binding the
-     transform to the active class made each layer zoom in on activation and
-     right back out on deactivation - a visible in/out pulse every 800ms.
-     A continuous animation instead drifts independently of the cross-fade,
-     so a slide is always mid-drift whenever it happens to be shown. */
-  animation: heroKenBurns 20s ease-in-out infinite alternate;
-  will-change: opacity, transform;              /* promote to its own layer */
-  backface-visibility: hidden;                  /* avoids sub-pixel flicker */
-}
-/* Negative delays start each layer part-way in, so the four are never in
-   lockstep and no layer waits before it begins drifting. */
-.hero-slide:nth-child(2) { animation-delay: -5s; }
-.hero-slide:nth-child(3) { animation-delay: -10s; }
-.hero-slide:nth-child(4) { animation-delay: -15s; }
-@keyframes heroKenBurns {
-  from { transform: scale(1.03); }
-  to   { transform: scale(1.13); }
-}
-/* Both the outgoing and incoming layer transition at once, which produces a
-   true cross-fade - the background is never exposed, so there is no flash. */
-.hero-slide.is-active { opacity: 1; }
+.home-hero { min-height: 78vh; width: 100%; }
 /* Two stacked layers: the required flat rgba(0,0,0,.45) wash, plus a
-   left-weighted gradient so the copy column keeps a dark backing no matter
-   which image is on screen. Without the second layer the heading sits on
-   whatever the photo happens to show. */
+   left-weighted gradient so the copy column keeps a dark backing across the
+   image. Without the second layer the heading sits on whatever the photo
+   happens to show. */
 .home-hero::after {
   background:
     linear-gradient(90deg, rgba(15,27,29,.7) 0%, rgba(15,27,29,.46) 42%, rgba(15,27,29,.1) 72%, rgba(15,27,29,.2) 100%),
@@ -51,16 +19,42 @@
 }
 .home-hero .hero-panel { text-shadow: 0 2px 18px rgba(0,0,0,.55); }
 .home-hero .hero-panel .btn { text-shadow: none; }
-@media (prefers-reduced-motion: reduce) {
-  .hero-slide { transition: opacity .3s linear; animation: none; transform: none; }
-}
-.hero-content { position: relative; z-index: 1; padding: 76px 0 58px; }
+.hero-content { position: relative; z-index: 1; padding: 56px 0 44px; }
 .hero-panel { width: min(660px, 100%); animation: rise .75s ease both; }
 .hero .lead { color: var(--text); }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
-.reservation-ribbon { position: relative; z-index: 2; margin-top: -56px; }
+/* Supporting hero content: a row of glass pills carrying the two or three
+   facts a guest wants before they read anything else on the page. Sits under
+   the lead on inner pages and under the buttons on the home hero. */
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+.hero-meta li {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 15px; border-radius: 999px;
+  font-size: .78rem; letter-spacing: .06em; text-transform: uppercase;
+  color: #FFFFFF; background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  text-shadow: none;
+}
+/* .hero-actions already carries a 28px bottom margin, so the pills only need
+   a small extra step when they follow the buttons rather than the lead. */
+.hero-actions + .hero-meta { margin-top: 2px; }
+.hero-meta i { color: var(--gold); font-size: .9em; }
+.hero-meta strong { font-weight: 600; }
+/* The ribbon used to be pulled up over the hero with a negative margin, which
+   left the quick-reserve card sitting on top of the hero image. It now clears
+   the hero and takes its own band of space. */
+.reservation-ribbon { position: relative; z-index: 2; margin-top: 26px; }
 .quick-reserve { display: grid; grid-template-columns: 1.1fr 1fr 1fr .8fr auto; gap: 12px; padding: 18px; border-radius: var(--radius); }
-.page-hero { min-height: 640px; display: grid; align-items: end; position: relative; overflow: hidden; background: var(--hero-gradient); }
+.page-hero { min-height: 460px; display: grid; align-items: end; position: relative; overflow: hidden; background: var(--hero-gradient); }
 .page-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; filter: saturate(1.06) contrast(1.04); }
-.page-hero .container { position: relative; z-index: 1; padding: 120px 0 76px; text-shadow: 0 2px 20px rgba(0,0,0,.85), 0 1px 4px rgba(0,0,0,.7); }
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,27,29,.82) 0%, rgba(15,27,29,.58) 46%, rgba(15,27,29,.22) 100%),
+    linear-gradient(180deg, rgba(15,27,29,.18) 0%, rgba(15,27,29,.72) 100%);
+}
+.page-hero .container { position: relative; z-index: 1; padding: 84px 0 54px; text-shadow: 0 2px 20px rgba(0,0,0,.85), 0 1px 4px rgba(0,0,0,.7); }
 .page-hero h1, .page-hero .lead { color: #FFFFFF; }

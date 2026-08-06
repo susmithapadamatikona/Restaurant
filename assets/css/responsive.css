@@ -16,20 +16,25 @@
   .grid-2, .split, .dish-detail, .dashboard-layout, .chart-grid { grid-template-columns: 1fr; }
   .quick-reserve, .menu-toolbar { grid-template-columns: 1fr 1fr; }
   .sidebar { position: static; height: auto; overflow: visible; }
+  .dashboard-layout .sidebar { position: fixed; height: 100dvh; overflow-y: auto; }
+  .dashboard-layout .dash-nav { grid-template-columns: 1fr; }
   .dash-side-foot { margin-top: 12px; }
   .dash-nav { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 24px; }
   .footer-brand, .footer-contact { grid-column: 1 / -1; }
   .footer-cta { flex-direction: column; align-items: flex-start; gap: 18px; }
   .newsletter { width: 100%; }
-  .auth-split { grid-template-columns: 1fr; min-height: 0; }
-  .auth-brand { position: static; height: auto; min-height: 62vh; align-self: stretch; padding: 30px 20px; gap: 24px; }
+  .auth-split { grid-template-columns: 1fr; min-height: 0; overflow: hidden; }
+  /* Stacked now, so the panel is a banner above the form rather than a full
+     column. 62vh pushed the sign-in fields off the first screen. */
+  .auth-brand { position: relative; top: auto; height: auto; min-height: 40vh; align-self: stretch; padding: 28px 20px 30px; gap: 20px; }
   .auth-brand h2 { font-size: 1.55rem; }
   .auth-brand-inner { max-width: 100%; }
   .auth-points { margin-top: 20px; }
-  .auth-panel { padding: 46px 20px; }
-  .page-hero { min-height: 520px; }
-  .page-hero .container { padding: 100px 0 62px; }
+  .auth-panel { position: relative; z-index: 1; padding: 46px 20px; }
+  .auth-form .form-grid { grid-template-columns: 1fr; }
+  .page-hero { min-height: 400px; }
+  .page-hero .container { padding: 72px 0 46px; }
   /* Grid and flex children default to min-width:auto, so a wide descendant sets
      a floor on the whole track. The data tables are min-width:720px inside a
      scrolling .table-wrap, which forced columns wider than the viewport. Below
@@ -46,16 +51,45 @@
   .grid-4, .grid-3, .stat-row, .widget-grid, .form-grid, .quick-reserve, .menu-toolbar, .nutrition, .footer-grid { grid-template-columns: 1fr; }
   .section-head { display: block; }
   .hero { min-height: auto; }
-  .hero-content { padding: 72px 0 92px; }
-  .page-hero { min-height: 420px; }
-  .page-hero .container { padding: 80px 0 48px; }
-  .reservation-ribbon { margin-top: -38px; }
+  .hero-content { padding: 56px 0 52px; }
+  .page-hero { min-height: 320px; }
+  .page-hero .container { padding: 58px 0 36px; }
+  .hero-meta { gap: 8px; margin-top: 16px; }
+  .hero-meta li { padding: 6px 12px; font-size: .7rem; letter-spacing: .04em; }
+  .reservation-ribbon { margin-top: 18px; }
   .media-stack { min-height: auto; }
   .media-stack img, .media-stack img:nth-child(2) { position: static; width: 100%; height: 260px; margin-bottom: 12px; }
   .dashboard-main { padding: 20px 16px; }
+  .dashboard-layout .dashboard-main { padding-top: 84px; }
   .dash-nav { grid-template-columns: 1fr; }
   .footer-bottom { display: block; }
   .cursor-dot { display: none; }
+  /* ---- Auth pages on phones -------------------------------------------
+     The brand photo becomes a short banner and the form takes the screen.
+     The desktop overlay stays clear through the upper half so the photo can
+     be seen; at this width the copy sits in that same clear band, so the
+     gradient is darkened and the photo dimmed to keep white text legible. */
+  .auth-brand { min-height: 0; padding: 20px 18px 26px; gap: 16px; }
+  .auth-brand > img { filter: brightness(.9) saturate(1.06); }
+  .auth-brand::after {
+    background: linear-gradient(180deg, rgba(15,27,29,.66) 0%, rgba(15,27,29,.44) 30%, rgba(15,27,29,.58) 60%, rgba(15,27,29,.84) 100%);
+  }
+  .auth-brand .auth-logo { height: 32px; }
+  .auth-brand h2 { font-size: 1.32rem; }
+  .auth-brand p { font-size: .88rem; }
+  .auth-points { gap: 10px; margin-top: 12px; padding-top: 14px; }
+  .auth-point i { font-size: .9rem; }
+  .auth-point strong { font-size: .9rem; }
+  .auth-point span { font-size: .82rem; line-height: 1.4; }
+  /* Grey text on the brightest corner of the photo was the least readable
+     thing on the page. Give the link its own backing instead. */
+  .auth-back {
+    top: 14px; right: 14px; padding: 7px 13px; border-radius: 999px;
+    color: #FFFFFF; font-size: .78rem;
+    background: rgba(15,27,29,.72); border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .auth-panel { padding: 34px 18px 46px; }
   .auth-head h1 { font-size: 1.7rem; }
   .social-row { grid-template-columns: repeat(2, 1fr); }
   .dash-actions { width: 100%; }
